@@ -1,0 +1,84 @@
+@charset "utf-8";
+/*
+layout - l-*
+component - c-*
+project - p-*
+utility - u-*
+*/
+
+/*! Based on
+ * Bootstrap v4.1.3 (https://getbootstrap.com/)
+ * Copyright 2011-2018 The Bootstrap Authors
+ * Copyright 2011-2018 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+
+  /* ==============================
+   Foundation
+  ================================= */
+@import "foundation/custom-variables";//オレオレ変数
+@import "foundation/bootstrap/functions";
+@import "foundation/bootstrap/variables";
+@import "foundation/bootstrap/mixins";
+@import "foundation/bootstrap/root";
+
+/*
+ Base
+----------------------------- */
+@import "foundation/bootstrap/reboot";
+
+
+/* ==============================
+ Layout
+================================= */
+
+
+
+/* ==============================
+ Object
+================================= */
+
+/*
+ Component
+----------------------------- */
+@import "object/component/bootstrap/type";
+@import "object/component/bootstrap/images";
+@import "object/component/bootstrap/code";
+@import "object/component/bootstrap/grid";
+@import "object/component/bootstrap/tables";
+@import "object/component/bootstrap/forms";
+@import "object/component/bootstrap/buttons";
+@import "object/component/bootstrap/transitions";
+@import "object/component/bootstrap/dropdown";
+@import "object/component/bootstrap/button-group";
+@import "object/component/bootstrap/input-group";
+@import "object/component/bootstrap/custom-forms";
+@import "object/component/bootstrap/nav";
+@import "object/component/bootstrap/navbar";
+@import "object/component/bootstrap/card";
+@import "object/component/bootstrap/breadcrumb";
+@import "object/component/bootstrap/pagination";
+@import "object/component/bootstrap/badge";
+@import "object/component/bootstrap/jumbotron";
+@import "object/component/bootstrap/alert";
+@import "object/component/bootstrap/progress";
+@import "object/component/bootstrap/media";
+@import "object/component/bootstrap/list-group";
+@import "object/component/bootstrap/close";
+@import "object/component/bootstrap/modal";
+@import "object/component/bootstrap/tooltip";
+@import "object/component/bootstrap/popover";
+@import "object/component/bootstrap/carousel";
+@import "object/component/bootstrap/print";
+
+/*
+ Project
+----------------------------- */
+
+
+/*
+ Utility
+----------------------------- */
+@import "object/utility/bootstrap/utilities";
+
