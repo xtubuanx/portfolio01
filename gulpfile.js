@@ -8,16 +8,19 @@ var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var cssdeclsort = require("css-declaration-sorter");
 var mqpacker = require("css-mqpacker");
-var aigis = require('gulp-aigis');
+var aigis = require("gulp-aigis");
+var browserSync = require("browser-sync");
 
 
-gulp.task("default", function () {
+gulp.task("sass", function () {
+
     return gulp.src("./shared/sass/**/*.scss")
         .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))//plumberの引数にエラーメッセージを設定
         .pipe(soursemaps.init())
         .pipe(sassGlob())
 
-        .pipe(sass({outputStyle:'compressed'}))
+        //.pipe(sass({outputStyle: 'compressed'}))
+        .pipe(sass({outputStyle: 'expanded'}))
         .pipe(postcss([
             autoprefixer({
                 // ☆IEは10以上、Androidは4.4以上
@@ -32,16 +35,33 @@ gulp.task("default", function () {
         .pipe(postcss([mqpacker()]))
         .pipe(soursemaps.write("./"))
         .pipe(gulp.dest("./shared/css"));
+
+
 });
 
 
-gulp.task('aigis', function() {
+gulp.task('aigis', function () {
     return gulp.src('./aigis_config.yml')
         .pipe(aigis());
 });
 
 
-gulp.task("default:watch", function () {
-    gulp.watch("./css/*.scss", ["default"]);
+gulp.task('server', function () {
+    return browserSync.init({
+        server: {
+            baseDir: "./",       //対象ディレクトリ
+            index: "index.html"      //インデックスファイル
+        }
+    });
 });
 
+gulp.task('bs-reload', function () {
+    browserSync.reload();
+});
+
+//ファイル監視
+gulp.task("watch", ["server"], function () {
+    gulp.watch("./shared/sass/**/*.scss", ["sass"]);
+    gulp.watch("./shared/css/*.css", ["bs-reload"]);
+    gulp.watch("./*.html", ['bs-reload']);
+});

@@ -13,11 +13,15 @@ utility - u-*
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
+//Custom variables
+$font-size-base: 0.75rem; //12px
+$site-theme-color: #0b2345;
+$site-theme-border: #243958;
 
   /* ==============================
    Foundation
   ================================= */
-@import "foundation/custom-variables";//オレオレ変数
+//@import "foundation/custom-variables";//オレオレ変数
 @import "foundation/bootstrap/functions";
 @import "foundation/bootstrap/variables";
 @import "foundation/bootstrap/mixins";
@@ -75,7 +79,7 @@ utility - u-*
 /*
  Project
 ----------------------------- */
-
+@import "object/project/header";
 
 /*
  Utility

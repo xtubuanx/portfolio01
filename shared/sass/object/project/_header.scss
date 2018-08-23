@@ -1,0 +1,95 @@
+@charset "utf-8";
+/*
+---
+name: header
+category:
+  - object
+  - object/project/header
+---
+
+サイトのヘッダーです。
+
+*/
+
+.p-header {
+  background-color: $site-theme-color;
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    color: $white;
+  }
+  &-mainContainer {
+    display: flex;
+    justify-content: space-between;
+  }
+  &-logo {
+    width: 166px;
+    height: 47px;
+  }
+  &-information {
+    background-color: $black;
+    color: $white;
+    text-align: center;
+  }
+  &-helper {
+    display: flex;
+    & > li {
+      margin: 5px;
+      display: block;
+    }
+  }
+  //Navigation
+  &-navigation {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    &__item {
+      display: block;
+      & > a {
+        display: block;
+        padding: 20px;
+        background-color: red;
+      }
+      &__contents {
+        width: 100vw;
+        display: none;
+        position: absolute;
+        left: 0;
+        color: #000;
+        background-color: transparentize($site-theme-color, 0.5);
+      }
+      &.is-mouseover:hover &__contents {
+        display: block;
+      }
+    }
+  }
+
+
+  //Widget
+  &Widget-helpers,
+  &Widget-navigation {
+    display: flex;
+  }
+
+  &Widget-navigation {
+    border-top: 1px solid $site-theme-border;
+    justify-content: space-between;
+  }
+
+}
+
+.p-icons {
+  display: flex;
+}
+
+.p-search {
+  display: flex;
+}
+
+.p-cart-status {
+  display: none;
+}
+
+
