@@ -11,5 +11,33 @@ Instagramのグリッド表示です。
 
 */
 
+.p-instagram-container {
+  max-width: $container-max-width;
+  @include make-container();
+}
+
 .p-instagram-grid {
+  @include make-row();
+
+  &__item {
+    //max-width: 250px;
+    @include make-col-ready();
+
+    @include media-breakpoint-down(xs) {
+      @include make-col(6);
+    }
+    @include media-breakpoint-down(sm) {
+      @include make-col(4);
+    }
+    @include media-breakpoint-up(md) {
+      @include make-col(3);
+    }
+
+    position: relative;
+    border: 1px solid $white;
+    transition: $transition-base;
+    &.mouseover:hover {
+      border: 1px solid $gray-300;
+    }
+  }
 }

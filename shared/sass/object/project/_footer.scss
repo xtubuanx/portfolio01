@@ -1,0 +1,88 @@
+@charset "utf-8";
+/*
+---
+name: footer
+category:
+  - object
+  - object/project/footer
+---
+
+サイトのフッターです。
+
+*/
+
+.p-footer {
+  background-color: $site-theme-color;
+
+  &-helper {
+    margin: 0;
+    padding: 0;
+    > li {
+      display: block;
+      @include media-breakpoint-down(sm) {
+        margin: 0;
+        padding: 0;
+        font-size: 1.4rem;
+        + li {
+          border-top: 1px solid rgba($black, 0.3);
+        }
+      }
+      > a {
+        display: block;
+        color: $white;
+        @include media-breakpoint-down(sm) {
+          padding: 1rem 0;
+          text-align: center;
+          &:hover {
+            text-decoration: none;
+            opacity: 0.8;
+            transform: $transition-fade;
+          }
+        }
+      }
+    }
+  }
+
+  //Widget
+  &Widget-country {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+//Country
+.p-dropdown-country {
+  padding: 0.5rem 4rem;
+  background-color: $site-secondary-color;
+  display: inline-block;
+  font-size: 1rem;
+  &__title {
+    text-align: center;
+    font-weight: normal;
+  }
+  &__body {
+    display: none;
+  }
+  &__list {
+    margin: 0;
+    padding: 0;
+    > li {
+      margin: 0;
+      padding: 0;
+      display: block;
+      text-align: center;
+    }
+  }
+}
+
+//copyright
+.p-copyright {
+  padding: 1.5rem 0.5rem;
+  color: $site-secondary-color;
+  text-align: center;
+  display: block;
+
+  @include media-breakpoint-down(sm) {
+    border-top: 1px solid $site-theme-border;
+  }
+}

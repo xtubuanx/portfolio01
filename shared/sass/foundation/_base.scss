@@ -25,11 +25,18 @@ a {
 
 img {
   max-width: 100%;
+  height: auto;
 }
 
 @include media-breakpoint-up(md) {
   body {
     min-width: $body-min-width;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  body {
+    padding-top: $header-height;
   }
 }
 

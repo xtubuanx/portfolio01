@@ -1,0 +1,27 @@
+@charset "utf-8";
+/*
+---
+name: toggle-navigation
+category:
+  - object
+  - object/project/toggle-navigation
+---
+
+スマホ用のトグルナビゲーションです。
+ファイル名変更する。
+*/
+
+.p-toggle-navigation {
+  width: 100%;
+  &-container {
+    width: 100%;
+    height: 100%;
+    margin-top: $header-height;
+    position: absolute;
+    overflow-y: auto;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: lighten($site-theme-color, 2.5%);
+  }
+}

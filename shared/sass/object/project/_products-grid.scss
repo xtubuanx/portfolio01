@@ -18,19 +18,17 @@ category:
 
 .p-products-grid {
   @include make-row();
-  //display: grid;
-  //grid-template-columns: 250px 250px 250px 250px;
-  //grid-template-rows: 1fr 1fr;
-  //grid-gap: 0;
+
 
   &__item {
     //max-width: 250px;
     @include make-col-ready();
 
+
     @include media-breakpoint-down(xs) {
       @include make-col(6);
     }
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-only(sm) {
       @include make-col(4);
     }
     @include media-breakpoint-up(md) {
@@ -38,21 +36,32 @@ category:
     }
 
     position: relative;
-    border: 1px solid $white;
-    transition-duration: 0.5s;
+    border: 1px solid transparent;
+    transition: $transition-base;
     &.mouseover:hover {
       border: 1px solid $gray-300;
     }
+    //
+    //@include media-breakpoint-up(md) {
+    //  &.mouseover &__link {
+    //    flex-wrap: nowrap;
+    //    color: red;
+    //  }
+    //}
+
   }
 
   &__link {
     padding: 0;
     display: flex;
     justify-content: center;
-    background-color: $white;
-    transition-duration: 0.5s;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    transition: $transition-base;
+
+
     &.p-label {
-      transition-duration: 0.5s;
+      transition: $transition-base;
       &.new:before {
         content: 'NEW';
         color: $orange;
@@ -72,10 +81,15 @@ category:
       }
     }
     &:hover {
-      background-color: $white;
       opacity: 1;
+      text-decoration: none;
     }
   }
+
+  //&__link:hover &__image {
+  //  opacity: 0.8;
+  //  transition: $transition-base;
+  //}
 
   &__link:hover .mouseover {
     background-color: rgba($white, 0.8);
@@ -89,30 +103,41 @@ category:
   padding: 1rem;
   display: flex;
   flex-wrap: wrap;
-  position: absolute;
   align-self: flex-end;
   align-content: flex-end;
   z-index: 2;
-  opacity: 0;
-  transition-duration: 0.5s;
+  transition: $transition-base;
+  position: relative;
 
-  &:after {
+  &.mouseover:after {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     justify-content: center;
-    content: url("../../shared/images/common/product-list-over.png");
-    opacity: 0;
     z-index: 2;
-    transition-duration: 0.5s;
+    transition: $transition-base;
   }
-  &:hover:after {
+  &.mouseover:hover:after {
     opacity: 1;
+  }
+
+  @include media-breakpoint-up(md) {
+    &.mouseover {
+      position: absolute;
+    }
+    &.mouseover,
+    &.mouseover:after {
+      opacity: 0;
+    }
+    &.mouseover:after {
+      content: url("../../shared/images/common/product-list-over.png");
+    }
   }
 
   &__name {
     font-weight: normal;
+    font-size: 1.4rem;
     color: $body-color;
   }
 
@@ -121,4 +146,8 @@ category:
     color: $gray-600;
     font-weight: bold;
   }
+}
+
+.p-recommend {
+  background-color: $gray-200;
 }

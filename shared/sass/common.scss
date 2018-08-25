@@ -17,13 +17,19 @@ utility - u-*
 $body-color: #333;
 $font-size-base: 1.3rem; //13px
 $font-family-sans-serif: "Hiragino Kaku Gothic ProN","メイリオ", sans-serif;
+$primary: #285ca6;
 $red:     #ff466b;
 $orange:  #ff8a00;
+$gray-200: #f2f4f5;
+$transition-base: all .3s ease-in-out;
+
 
 //Original variables
 $body-min-width: 1040px;
+$header-height: 78px;//固定ヘッダーの高さ
 $container-max-width: 1000px;
 $site-theme-color: #0b2345;
+$site-secondary-color: #6d7b8f;
 $site-theme-border: #243958;
 
 /*
@@ -124,8 +130,16 @@ $grid-breakpoints: (
  Project
 ----------------------------- */
 @import "object/project/header";
+@import "object/project/footer";
+@import "object/project/header_pc";
+@import "object/project/footer_pc";
+@import "object/project/toggle-navigation2";
+@import "object/project/category-list";
 @import "object/project/products-grid";
 @import "object/project/instagram-grid";
+
+//トップページ用
+@import "object/project/pickup";
 
 /*
  Utility

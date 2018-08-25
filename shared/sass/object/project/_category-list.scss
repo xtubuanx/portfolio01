@@ -1,0 +1,60 @@
+@charset "utf-8";
+/*
+---
+name: category-list
+category:
+  - object
+  - object/project/category-list
+---
+
+スマホ用のカテゴリリストです
+*/
+
+.p-category {
+  margin: 0;
+
+  &__title {
+    padding: 1rem;
+    background-color: $site-theme-color;
+    border-bottom: 1px solid $white;
+    color: $white;
+    font-weight: normal;
+    text-align: center;
+    font-size: 1.2rem;
+    display: block;
+    
+    &.is-close:after {
+      content: '+';
+      float: right;
+    }
+  }
+  
+  &__body {
+    margin: 0;
+    display: none;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    > li {
+      display: block;
+      border-bottom: 1px solid $gray-200;
+      font-size: 1.4rem;
+      > a {
+        padding: 1rem;
+        display: block;
+      }
+    }
+  }
+  &__button {
+    padding: 1rem;
+    background-color: $primary;
+    color: $white;
+    font-weight: normal;
+    text-align: center;
+    font-size: 1.2rem;
+    display: block;
+  }
+}
+
