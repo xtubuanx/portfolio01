@@ -14,7 +14,7 @@ category:
   margin: 0;
 
   &__title {
-    padding: 1rem;
+    padding: $input-btn-padding-x-lg;
     background-color: $site-theme-color;
     border-bottom: 1px solid $white;
     color: $white;

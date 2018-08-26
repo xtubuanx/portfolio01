@@ -22,13 +22,14 @@ $red:     #ff466b;
 $orange:  #ff8a00;
 $gray-200: #f2f4f5;
 $transition-base: all .3s ease-in-out;
-
+$btn-border-radius: 0;
 
 //Original variables
 $body-min-width: 1040px;
-$header-height: 78px;//固定ヘッダーの高さ
+$header-height: 55px;//固定ヘッダーの高さ
 $container-max-width: 1000px;
 $site-theme-color: #0b2345;
+$site-theme-color--lighten: #183154;
 $site-secondary-color: #6d7b8f;
 $site-theme-border: #243958;
 
@@ -123,7 +124,7 @@ $grid-breakpoints: (
 @import "object/component/bootstrap/modal";
 @import "object/component/bootstrap/tooltip";
 @import "object/component/bootstrap/popover";
-@import "object/component/bootstrap/carousel";
+//@import "object/component/bootstrap/carousel";
 @import "object/component/bootstrap/print";
 
 /*
@@ -138,8 +139,16 @@ $grid-breakpoints: (
 @import "object/project/products-grid";
 @import "object/project/instagram-grid";
 
+@import "object/project/search-form";
+@import "object/project/cart-icon";
+@import "object/project/button";
+@import "object/project/title";
+
+
 //トップページ用
 @import "object/project/pickup";
+
+
 
 /*
  Utility

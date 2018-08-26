@@ -13,7 +13,7 @@ category:
 
 @include media-breakpoint-up(md) {
   .p-footer {
-    padding: 4rem 0;
+    padding: 4rem 0 3rem 0;
     &-helper {
       display: flex;
       justify-content: center;

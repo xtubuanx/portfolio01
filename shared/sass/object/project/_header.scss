@@ -35,6 +35,10 @@ category:
     color: $white;
     text-align: center;
     font-size: 1rem;
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
   }
   &-mainContainer {
     height: 55px;
@@ -60,4 +64,18 @@ category:
     display: none;
   }
 
+}
+
+.p-header-bar {
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__item {
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+  }
 }

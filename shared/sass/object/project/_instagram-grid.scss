@@ -10,13 +10,17 @@ category:
 Instagramのグリッド表示です。
 
 */
+.p-instagram {
+  margin-bottom: 20px;
+  padding-bottom: 80px;
+  background-color: #e5e5e5;
 
-.p-instagram-container {
+&-container {
   max-width: $container-max-width;
   @include make-container();
 }
 
-.p-instagram-grid {
+&-grid {
   @include make-row();
 
   &__item {
@@ -40,4 +44,5 @@ Instagramのグリッド表示です。
       border: 1px solid $gray-300;
     }
   }
+}
 }

@@ -4,19 +4,36 @@
     <meta charset="UTF-8">
     <title>【ポートフォリオ用】AGATHA ONLINE STORE｜アガタ オンラインストア</title>
     <link rel="stylesheet" href="shared/css/common.css">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="shared/js/slick/slick.css">
+    <link rel="stylesheet" href="shared/js/slick/slick-theme.css">
 </head>
 <body>
-<header class="p-header">
+<header class="p-header" id="pagetop">
     <div class="p-header-information">
         <p>このサイトは個人のポートフォリオ用に制作したダミーサイトです。</p>
     </div>
     <!--.p-header-info-->
 
     <div class="p-header-mainContainer">
-        <div class="p-headerWidget-logo">
-            <h1 class="p-header-logo"><img src="shared/images/common/logo.svg" alt=""></h1>
+
+        <div class="p-header-bar">
+            <div class="p-header-bar__item">
+                <a href="cart/" class="p-navigation-cart__anchor"><span
+                        class="p-navigation-cart__hidden">現在のカートの中身は</span><span
+                        class="p-navigation-cart__number">0</span><span
+                        class="p-navigation-cart__hidden">個</span></a>
+            </div>
+
+            <div class="p-headerWidget-logo">
+                <h1 class="p-header-logo"><img src="shared/images/common/logo.svg" alt=""></h1>
+            </div>
+
+            <div class="p-header-bar__item">
+                三
+            </div>
+
         </div>
+
 
         <div class="p-headerWidget-helpers">
             <div class="p-headerWidget-helper">
@@ -53,51 +70,76 @@
     </div>
     <!--.p-header-mainContainer-->
     <nav class="p-headerWidget-navigation">
-        <ul class="p-header-navigation">
-            <li class="p-header-navigation__item mouseover"><a href="">ニュース</a>
-                <div class="row p-header-navigation__item__contents">
-                    <div class="col-sm-4"><a href=""><img src="shared/images/common/header-banner/banner-01.png" alt=""
-                                                          width="320" height="150"></a></div>
-                    <div class="col-sm-4"><a href=""><img src="shared/images/common/header-banner/banner-01.png" alt=""
-                                                          width="320" height="150"></a></div>
-                    <div class="col-sm-4"><a href=""><img src="shared/images/common/header-banner/banner-01.png" alt=""
-                                                          width="320" height="150"></a></div>
-                </div>
 
-            </li>
-            <li class="p-header-navigation__item mouseover"><a href="">カテゴリーから探す</a>
-                <div class="row p-header-navigation__item__contents">
-                    <div class="col-sm-4"><a href=""><img src="shared/images/common/header-banner/banner-01.png" alt=""
-                                                          width="320" height="150"></a></div>
-                </div>
-            </li>
-            <li class="p-header-navigation__item mouseover"><a href="">コレクションから探す</a>
-                <div class="row p-header-navigation__item__contents">
-                    <div class="col-sm-4"><a href=""><img src="shared/images/common/header-banner/banner-01.png" alt=""
-                                                          width="320" height="150"></a></div>
-                </div>
-            </li>
-            <li class="p-header-navigation__item"><a href="">ギフトを探す</a></li>
-            <li class="p-header-navigation__item"><a href="">INSTAGRAMから探す</a></li>
-        </ul>
-        <div class="p-navigation-cart">
-            <a href="cart/" class="p-navigation-cart__anchor"><span
-                    class="p-navigation-cart__hidden">現在のカートの中身は</span><span
-                    class="p-navigation-cart__number">0</span><span
-                    class="p-navigation-cart__hidden">個</span></a>
 
-            <div class="p-cart-status">
-                <p>ショッピングバッグ</p>
-                <p>バッグに商品が0件あります。</p>
-                <p>合計0円（税込）</p>
-                <p><a href="cart/">バッグを見る</a></p>
+        <div class="p-navigation-fixed">
+            <h1 class="p-header-logo fixed"><img src="shared/images/common/logo.svg" alt=""></h1>
+            <ul class="p-header-navigation">
+                <li class="p-header-navigation__item mouseover"><a href="">ニュース</a>
+                    <div class="row p-header-navigation__item__contents">
+                        <div class="col-sm-4"><a href=""><img src="shared/images/common/header-banner/banner-01.png"
+                                                              alt=""
+                                                              width="320" height="150"></a></div>
+                        <div class="col-sm-4"><a href=""><img src="shared/images/common/header-banner/banner-01.png"
+                                                              alt=""
+                                                              width="320" height="150"></a></div>
+                        <div class="col-sm-4"><a href=""><img src="shared/images/common/header-banner/banner-01.png"
+                                                              alt=""
+                                                              width="320" height="150"></a></div>
+                    </div>
+
+                </li>
+                <li class="p-header-navigation__item mouseover"><a href="">カテゴリーから探す</a>
+                    <div class="row p-header-navigation__item__contents">
+                        <div class="col-sm-4"><a href=""><img src="shared/images/common/header-banner/banner-01.png"
+                                                              alt=""
+                                                              width="320" height="150"></a></div>
+                    </div>
+                </li>
+                <li class="p-header-navigation__item mouseover"><a href="">コレクションから探す</a>
+                    <div class="row p-header-navigation__item__contents">
+                        <div class="col-sm-4"><a href=""><img src="shared/images/common/header-banner/banner-01.png"
+                                                              alt=""
+                                                              width="320" height="150"></a></div>
+                    </div>
+                </li>
+                <li class="p-header-navigation__item"><a href="">ギフトを探す</a></li>
+                <li class="p-header-navigation__item"><a href="">INSTAGRAMから探す</a></li>
+            </ul>
+            <div class="p-navigation-cart">
+                <a href="cart/" class="p-navigation-cart__anchor"><span
+                        class="p-navigation-cart__hidden">現在のカートの中身は</span><span
+                        class="p-navigation-cart__number">0</span><span
+                        class="p-navigation-cart__hidden">個</span></a>
+
+                <div class="p-cart-status">
+                    <p>ショッピングバッグ</p>
+                    <p>バッグに商品が0件あります。</p>
+                    <p>合計0円（税込）</p>
+                    <p><a href="cart/">バッグを見る</a></p>
+                </div>
             </div>
+
+
+            <ul class="p-icons fixed">
+                <li><a href=""><img src="shared/images/common/link-ig.png" alt="AGATHA公式Instagramへリンク（新しいタブが開きます）"></a>
+                </li>
+                <li><a href=""><img src="shared/images/common/link-fb.png"
+                                    alt="AGATHA公式Facebookページへリンク（新しいタブが開きます）"></a>
+                </li>
+            </ul>
         </div>
     </nav>
-
 </header>
 <main class="p-main">
-    <div class="d-sm-none">
+    <div class="p-slider-visual" id="js-slider-visual">
+        <div><a href=""><img src="shared/images/slider/home-slide-15.jpg" alt=""></a></div>
+        <div><a href=""><img src="shared/images/slider/home-slide-16.jpg" alt=""></a></div>
+        <div><a href=""><img src="shared/images/slider/home-slide-17.jpg" alt=""></a></div>
+    </div>
+
+
+    <div class="d-md-none">
         <div class="p-pickup">
             <ul class="p-pickup-banner">
                 <li><a href=""><img src="shared/images/common/header-banner/banner-01.png" alt=""
@@ -146,12 +188,13 @@
     <!--/d-md-none-->
     <section class="p-products">
         <div class="c-container-maxWidth">
-            <h2>NEW ITEM</h2>
+            <h2 class="p-title-home lv1">NEW ITEM</h2>
             <div class="p-products-container">
                 <div class="p-products-grid">
                     <div class="p-products-grid__item mouseover">
                         <a href="product.html" class="p-products-grid__link p-label new">
-                            <img src="shared/images/products/P02450876-232-240_01.jpg" alt="" class="p-products-grid__image">
+                            <img src="shared/images/products/P02450876-232-240_01.jpg" alt=""
+                                 class="p-products-grid__image">
                             <dl class="p-products-info mouseover">
                                 <dt class="p-products-info__name">バニーナバングル、ネイビー／シルバー</dt>
                                 <dd class="p-products-info__price">¥7,560</dd>
@@ -161,7 +204,8 @@
                     </div>
                     <div class="p-products-grid__item mouseover">
                         <a href="product.html" class="p-products-grid__link p-label new">
-                            <img src="shared/images/products/P02450876-232-240_01.jpg" alt="" class="p-products-grid__image">
+                            <img src="shared/images/products/P02450876-232-240_01.jpg" alt=""
+                                 class="p-products-grid__image">
                             <dl class="p-products-info mouseover">
                                 <dt class="p-products-info__name">バニーナバングル、ネイビー／シルバー</dt>
                                 <dd class="p-products-info__price">¥7,560</dd>
@@ -171,7 +215,8 @@
                     </div>
                     <div class="p-products-grid__item mouseover">
                         <a href="product.html" class="p-products-grid__link p-label new">
-                            <img src="shared/images/products/P02450876-232-240_01.jpg" alt="" class="p-products-grid__image">
+                            <img src="shared/images/products/P02450876-232-240_01.jpg" alt=""
+                                 class="p-products-grid__image">
                             <dl class="p-products-info mouseover">
                                 <dt class="p-products-info__name">バニーナバングル、ネイビー／シルバー</dt>
                                 <dd class="p-products-info__price">¥7,560</dd>
@@ -181,7 +226,8 @@
                     </div>
                     <div class="p-products-grid__item mouseover">
                         <a href="product.html" class="p-products-grid__link p-label new">
-                            <img src="shared/images/products/P02450876-232-240_01.jpg" alt="" class="p-products-grid__image">
+                            <img src="shared/images/products/P02450876-232-240_01.jpg" alt=""
+                                 class="p-products-grid__image">
                             <dl class="p-products-info mouseover">
                                 <dt class="p-products-info__name">バニーナバングル、ネイビー／シルバー</dt>
                                 <dd class="p-products-info__price">¥7,560</dd>
@@ -191,7 +237,8 @@
                     </div>
                     <div class="p-products-grid__item mouseover">
                         <a href="product.html" class="p-products-grid__link p-label new">
-                            <img src="shared/images/products/P02450876-232-240_01.jpg" alt="" class="p-products-grid__image">
+                            <img src="shared/images/products/P02450876-232-240_01.jpg" alt=""
+                                 class="p-products-grid__image">
                             <dl class="p-products-info mouseover">
                                 <dt class="p-products-info__name">バニーナバングル、ネイビー／シルバー</dt>
                                 <dd class="p-products-info__price">¥7,560</dd>
@@ -201,7 +248,8 @@
                     </div>
                     <div class="p-products-grid__item mouseover">
                         <a href="product.html" class="p-products-grid__link p-label new">
-                            <img src="shared/images/products/P02450876-232-240_01.jpg" alt="" class="p-products-grid__image">
+                            <img src="shared/images/products/P02450876-232-240_01.jpg" alt=""
+                                 class="p-products-grid__image">
                             <dl class="p-products-info mouseover">
                                 <dt class="p-products-info__name">バニーナバングル、ネイビー／シルバー</dt>
                                 <dd class="p-products-info__price">¥7,560</dd>
@@ -211,7 +259,8 @@
                     </div>
                     <div class="p-products-grid__item mouseover">
                         <a href="product.html" class="p-products-grid__link p-label new">
-                            <img src="shared/images/products/P02450876-232-240_01.jpg" alt="" class="p-products-grid__image">
+                            <img src="shared/images/products/P02450876-232-240_01.jpg" alt=""
+                                 class="p-products-grid__image">
                             <dl class="p-products-info mouseover">
                                 <dt class="p-products-info__name">バニーナバングル、ネイビー／シルバー</dt>
                                 <dd class="p-products-info__price">¥7,560</dd>
@@ -221,7 +270,8 @@
                     </div>
                     <div class="p-products-grid__item mouseover">
                         <a href="product.html" class="p-products-grid__link p-label new">
-                            <img src="shared/images/products/P02450876-232-240_01.jpg" alt="" class="p-products-grid__image">
+                            <img src="shared/images/products/P02450876-232-240_01.jpg" alt=""
+                                 class="p-products-grid__image">
                             <dl class="p-products-info mouseover">
                                 <dt class="p-products-info__name">バニーナバングル、ネイビー／シルバー</dt>
                                 <dd class="p-products-info__price">¥7,560</dd>
@@ -236,82 +286,83 @@
         <!--/c-container-maxWidth-->
     </section>
     <section class="p-instagram">
-        <h2>INSTAGRAM</h2>
+        <h2 class="p-title-home">INSTAGRAM</h2>
         <div class="p-instagram-container">
-        <div class="p-instagram-grid js-slider">
-            <div class="p-instagram-grid__item">
-                <a href="" class="p-instagram-grid__link">
-                    <img src="shared/images/products/P02450876-232-240_01.jpg" alt="">
-                </a>
-            </div>
-            <div class="p-instagram-grid__item">
-                <a href="" class="p-instagram-grid__link">
-                    <img src="shared/images/products/P02450876-232-240_01.jpg" alt="">
+            <div class="p-instagram-grid" id="js-slider-instagram">
+                <div class="p-instagram-grid__item">
+                    <a href="" class="p-instagram-grid__link">
+                        <img src="shared/images/products/P02450876-232-240_01.jpg" alt="">
+                    </a>
+                </div>
+                <div class="p-instagram-grid__item">
+                    <a href="" class="p-instagram-grid__link">
+                        <img src="shared/images/products/P02450876-232-240_01.jpg" alt="">
 
-                </a>
-            </div>
-            <div class="p-instagram-grid__item">
-                <a href="" class="p-instagram-grid__link">
-                    <img src="shared/images/products/P02450876-232-240_01.jpg" alt="">
+                    </a>
+                </div>
+                <div class="p-instagram-grid__item">
+                    <a href="" class="p-instagram-grid__link">
+                        <img src="shared/images/products/P02450876-232-240_01.jpg" alt="">
 
-                </a>
-            </div>
-            <div class="p-instagram-grid__item">
-                <a href="" class="p-instagram-grid__link">
-                    <img src="shared/images/products/P02450876-232-240_01.jpg" alt="">
+                    </a>
+                </div>
+                <div class="p-instagram-grid__item">
+                    <a href="" class="p-instagram-grid__link">
+                        <img src="shared/images/products/P02450876-232-240_01.jpg" alt="">
 
-                </a>
-            </div>
-            <div class="p-instagram-grid__item">
-                <a href="" class="p-instagram-grid__link">
-                    <img src="shared/images/products/P02450876-232-240_01.jpg" alt="">
+                    </a>
+                </div>
+                <div class="p-instagram-grid__item">
+                    <a href="" class="p-instagram-grid__link">
+                        <img src="shared/images/products/P02450876-232-240_01.jpg" alt="">
 
-                </a>
-            </div>
-            <div class="p-instagram-grid__item">
-                <a href="" class="p-instagram-grid__link">
-                    <img src="shared/images/products/P02450876-232-240_01.jpg" alt="">
+                    </a>
+                </div>
+                <div class="p-instagram-grid__item">
+                    <a href="" class="p-instagram-grid__link">
+                        <img src="shared/images/products/P02450876-232-240_01.jpg" alt="">
 
-                </a>
-            </div>
-            <div class="p-instagram-grid__item">
-                <a href="" class="p-instagram-grid__link">
-                    <img src="shared/images/products/P02450876-232-240_01.jpg" alt="">
+                    </a>
+                </div>
+                <div class="p-instagram-grid__item">
+                    <a href="" class="p-instagram-grid__link">
+                        <img src="shared/images/products/P02450876-232-240_01.jpg" alt="">
 
-                </a>
-            </div>
-            <div class="p-instagram-grid__item">
-                <a href="" class="p-instagram-grid__link">
-                    <img src="shared/images/products/P02450876-232-240_01.jpg" alt="">
+                    </a>
+                </div>
+                <div class="p-instagram-grid__item">
+                    <a href="" class="p-instagram-grid__link">
+                        <img src="shared/images/products/P02450876-232-240_01.jpg" alt="">
 
-                </a>
-            </div>
-            <div class="p-instagram-grid__item">
-                <a href="" class="p-instagram-grid__link">
-                    <img src="shared/images/products/P02450876-232-240_01.jpg" alt="">
+                    </a>
+                </div>
+                <div class="p-instagram-grid__item">
+                    <a href="" class="p-instagram-grid__link">
+                        <img src="shared/images/products/P02450876-232-240_01.jpg" alt="">
 
-                </a>
-            </div>
-            <div class="p-instagram-grid__item">
-                <a href="" class="p-instagram-grid__link">
-                    <img src="shared/images/products/P02450876-232-240_01.jpg" alt="">
+                    </a>
+                </div>
+                <div class="p-instagram-grid__item">
+                    <a href="" class="p-instagram-grid__link">
+                        <img src="shared/images/products/P02450876-232-240_01.jpg" alt="">
 
-                </a>
+                    </a>
+                </div>
             </div>
-        </div>
         </div>
         <!--/p-instagram-container-->
         <p class="text-center"><a href="" class="btn btn-primary">VIEW MORE</a></p>
     </section>
 
     <section class="p-recommend">
-        <h2>RECOMMEND ITEM</h2>
+        <h2 class="p-title-home">RECOMMEND ITEM</h2>
 
         <div class="p-products-container">
             <div class="p-products-grid">
                 <div class="p-products-grid__item">
                     <a href="product.html" class="p-products-grid__link">
-                        <img src="shared/images/products/P02450876-232-240_01.jpg" alt="" class="p-products-grid__image">
+                        <img src="shared/images/products/P02450876-232-240_01.jpg" alt=""
+                             class="p-products-grid__image">
                         <dl class="p-products-info">
                             <dt class="p-products-info__name">バニーナバングル、ネイビー／シルバー</dt>
                             <dd class="p-products-info__price">¥7,560</dd>
@@ -321,7 +372,8 @@
                 </div>
                 <div class="p-products-grid__item">
                     <a href="product.html" class="p-products-grid__link">
-                        <img src="shared/images/products/P02450876-232-240_01.jpg" alt="" class="p-products-grid__image">
+                        <img src="shared/images/products/P02450876-232-240_01.jpg" alt=""
+                             class="p-products-grid__image">
                         <dl class="p-products-info">
                             <dt class="p-products-info__name">バニーナバングル、ネイビー／シルバー</dt>
                             <dd class="p-products-info__price">¥7,560</dd>
@@ -331,7 +383,8 @@
                 </div>
                 <div class="p-products-grid__item">
                     <a href="product.html" class="p-products-grid__link">
-                        <img src="shared/images/products/P02450876-232-240_01.jpg" alt="" class="p-products-grid__image">
+                        <img src="shared/images/products/P02450876-232-240_01.jpg" alt=""
+                             class="p-products-grid__image">
                         <dl class="p-products-info">
                             <dt class="p-products-info__name">バニーナバングル、ネイビー／シルバー</dt>
                             <dd class="p-products-info__price">¥7,560</dd>
@@ -341,7 +394,8 @@
                 </div>
                 <div class="p-products-grid__item">
                     <a href="product.html" class="p-products-grid__link">
-                        <img src="shared/images/products/P02450876-232-240_01.jpg" alt="" class="p-products-grid__image">
+                        <img src="shared/images/products/P02450876-232-240_01.jpg" alt=""
+                             class="p-products-grid__image">
                         <dl class="p-products-info">
                             <dt class="p-products-info__name">バニーナバングル、ネイビー／シルバー</dt>
                             <dd class="p-products-info__price">¥7,560</dd>
@@ -351,7 +405,8 @@
                 </div>
                 <div class="p-products-grid__item">
                     <a href="product.html" class="p-products-grid__link">
-                        <img src="shared/images/products/P02450876-232-240_01.jpg" alt="" class="p-products-grid__image">
+                        <img src="shared/images/products/P02450876-232-240_01.jpg" alt=""
+                             class="p-products-grid__image">
                         <dl class="p-products-info">
                             <dt class="p-products-info__name">バニーナバングル、ネイビー／シルバー</dt>
                             <dd class="p-products-info__price">¥7,560</dd>
@@ -361,7 +416,8 @@
                 </div>
                 <div class="p-products-grid__item">
                     <a href="product.html" class="p-products-grid__link">
-                        <img src="shared/images/products/P02450876-232-240_01.jpg" alt="" class="p-products-grid__image">
+                        <img src="shared/images/products/P02450876-232-240_01.jpg" alt=""
+                             class="p-products-grid__image">
                         <dl class="p-products-info">
                             <dt class="p-products-info__name">バニーナバングル、ネイビー／シルバー</dt>
                             <dd class="p-products-info__price">¥7,560</dd>
@@ -371,7 +427,8 @@
                 </div>
                 <div class="p-products-grid__item">
                     <a href="product.html" class="p-products-grid__link">
-                        <img src="shared/images/products/P02450876-232-240_01.jpg" alt="" class="p-products-grid__image">
+                        <img src="shared/images/products/P02450876-232-240_01.jpg" alt=""
+                             class="p-products-grid__image">
                         <dl class="p-products-info">
                             <dt class="p-products-info__name">バニーナバングル、ネイビー／シルバー</dt>
                             <dd class="p-products-info__price">¥7,560</dd>
@@ -381,7 +438,8 @@
                 </div>
                 <div class="p-products-grid__item">
                     <a href="product.html" class="p-products-grid__link">
-                        <img src="shared/images/products/P02450876-232-240_01.jpg" alt="" class="p-products-grid__image">
+                        <img src="shared/images/products/P02450876-232-240_01.jpg" alt=""
+                             class="p-products-grid__image">
                         <dl class="p-products-info">
                             <dt class="p-products-info__name">バニーナバングル、ネイビー／シルバー</dt>
                             <dd class="p-products-info__price">¥7,560</dd>
@@ -394,6 +452,10 @@
         <!--/p-products-container-->
     </section>
 </main>
+<div class="p-pagetop">
+    <a href="#pagetop" class="p-pagetop--footer">ページトップへ</a>
+    <a href="#pagetop" class="p-pagetop--fixed">ページトップへ</a>
+</div>
 <footer class="p-footer">
     <div class="p-footerWidget-helper">
         <ul class="p-footer-helper">
@@ -417,15 +479,18 @@
                     <li><a href="">JAPAN</a></li>
                     <li><a href="">JAPAN</a></li>
                     <li><a href="">JAPAN</a></li>
-                </ul></dd>
+                </ul>
+            </dd>
         </dl>
     </div>
 
 
     <div class="p-footerWidget-icons d-lg-none">
-        <ul>
-            <li><a href=""><img src="shared/images/common/link-ig.png" alt="AGATHA公式Instagramへリンク（新しいタブが開きます）"></a></li>
-            <li><a href=""><img src="shared/images/common/link-fb.png" alt="AGATHA公式Facebookページへリンク（新しいタブが開きます）"></a>
+        <ul class="p-footer-icons">
+            <li><a href=""><img src="shared/images/common/link-ig.sp.png" width="35" height="35"
+                                alt="AGATHA公式Instagramへリンク（新しいタブが開きます）"></a></li>
+            <li><a href=""><img src="shared/images/common/link-fb.sp.png" width="35" height="35"
+                                alt="AGATHA公式Facebookページへリンク（新しいタブが開きます）"></a>
             </li>
         </ul>
     </div>
@@ -433,13 +498,12 @@
     <small class="p-copyright">Copyright © XXX CO., LTD. All Rights Reserved.</small>
 </footer>
 
-<div class="p-pagetop"><a href="#pagetop" class="p-pagetop__link"><span class="d-none">ページの上部に戻る</span></a></div>
 
 <div class="p-toggle-navigation-container">
     <aside class="p-toggle-navigation">
-        <ul>
-            <li><a href="" class="btn">新規会員登録</a></li>
-            <li><a href="" class="btn">ログイン</a></li>
+        <ul class="p-helper-buttons">
+            <li><a href="" class="btn p-button-helper">新規会員登録</a></li>
+            <li><a href="" class="btn p-button-helper">ログイン</a></li>
         </ul>
 
 
@@ -447,14 +511,14 @@
             <dl class="p-navigation-category">
                 <dt class="p-navigation-category__title">カテゴリーから探す</dt>
                 <dd class="p-navigation-category__body">
-                    <ul class="p-navigation-category__list">
-                        <li><a href="">リング</a></li>
-                        <li><a href="">リング</a></li>
-                        <li><a href="">リング</a></li>
-                        <li><a href="">リング</a></li>
-                        <li><a href="">リング</a></li>
-                        <li><a href="">リング</a></li>
-                        <li><a href="">リング</a></li>
+                    <ul class="p-navigation-category-list">
+                        <li class="p-navigation-category-list__item"><a href="">リング</a></li>
+                        <li class="p-navigation-category-list__item"><a href="">リング</a></li>
+                        <li class="p-navigation-category-list__item"><a href="">リング</a></li>
+                        <li class="p-navigation-category-list__item"><a href="">リング</a></li>
+                        <li class="p-navigation-category-list__item"><a href="">リング</a></li>
+                        <li class="p-navigation-category-list__item"><a href="">リング</a></li>
+                        <li class="p-navigation-category-list__item"><a href="">リング</a></li>
                     </ul>
                 </dd class="p-category__body">
             </dl>
@@ -462,67 +526,68 @@
             <dl class="p-navigation-category">
                 <dt class="p-navigation-category__title">カテゴリーから探す</dt>
                 <dd class="p-navigation-category__body">
-                    <ul class="p-navigation-category__list">
-                        <li><a href="">リング</a></li>
-                        <li><a href="">リング</a></li>
-                        <li><a href="">リング</a></li>
-                        <li><a href="">リング</a></li>
-                        <li><a href="">リング</a></li>
-                        <li><a href="">リング</a></li>
-                        <li><a href="">リング</a></li>
+                    <ul class="p-navigation-category-list">
+                        <li class="p-navigation-category-list__item"><a href="">リング</a></li>
+                        <li class="p-navigation-category-list__item"><a href="">リング</a></li>
+                        <li class="p-navigation-category-list__item"><a href="">リング</a></li>
+                        <li class="p-navigation-category-list__item"><a href="">リング</a></li>
+                        <li class="p-navigation-category-list__item"><a href="">リング</a></li>
+                        <li class="p-navigation-category-list__item"><a href="">リング</a></li>
+                        <li class="p-navigation-category-list__item"><a href="">リング</a></li>
+                        <li class="p-navigation-category-list__item"><a href="">リング</a></li>
                     </ul>
                 </dd class="p-category__body">
             </dl>
-            <ul class="p-navigation-list">
-                <li><a href="">ギフトを探す</a></li>
-                <li><a href="">INSTAGRAMから探す</a></li>
-                <li><a href="">お買い物ガイド</a></li>
+            <ul class="p-navigation-category-list--single">
+                <li class="p-navigation-category-list__item"><a href="">ギフトを探す</a></li>
+                <li class="p-navigation-category-list__item"><a href="">INSTAGRAMから探す</a></li>
+                <li class="p-navigation-category-list__item"><a href="">お買い物ガイド</a></li>
 
             </ul>
         </div>
 
-
-        <form class="p-search">
-            <input type="search" placeholder="キーワード検索" class="p-search__input">
-            <button type="submit"><img src="shared/images/common/search-icon.png" alt="キーワード検索"
-                                       class="p-search-input__button"></button>
-        </form>
+        <div class="p-helper-buttons">
+            <form class="p-search">
+                <input type="search" placeholder="キーワード検索" class="p-search__input">
+                <button type="submit" class="p-search__button"><img src="shared/images/common/search-icon.png"
+                                                                    alt="キーワード検索"
+                                                                    class="p-search-input__button"></button>
+            </form>
+        </div>
 
     </aside>
 
 
 </div>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="shared/js/jquery.min.js"></script>
+<!--<script src="shared/js/slick/slick.js"></script>-->
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
 <script>
-    $('.js-slider').slick({
+    $('#js-slider-visual').slick({
         dots: true,
-        infinite: false,
-        speed: 300,
+        arrows: false,
+    });
+    $('#js-slider-instagram').slick({
+        mobileFirst: true,
         slidesToShow: 4,
         slidesToScroll: 4,
         responsive: [
             {
                 breakpoint: 1024,
+                /*
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 3,
-                    infinite: true,
-                    dots: true
-                }
+                    //unslick: "true"
+                }*/
+                settings: 'unslick'
             },
             {
-                breakpoint: 600,
+                breakpoint: 991,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
                 }
             }
             // You can unslick at a given breakpoint now by adding:

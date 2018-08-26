@@ -1,0 +1,53 @@
+@charset "utf-8";
+/*
+---
+name: cart-icon
+category:
+  - object
+  - object/project/-icon
+---
+
+カートのアイコンです
+
+*/
+
+.p-cart-status {
+  display: none;
+}
+
+.p-navigation-cart {
+  display: flex;
+  position: relative;
+  &__anchor {
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-self: stretch;
+    &:before {
+      width: 16px;
+      align-self: center;
+      display: block;
+      content: url("../../shared/images/common/ico-bag.svg");
+    }
+    &:hover {
+      text-decoration: none;
+      &:before {
+        opacity: 0.5;
+      }
+    }
+  }
+  &__hidden {
+    display: none;
+  }
+  &__number {
+    width: 1.6rem;
+    margin-top: -20px;
+    line-height: 1.6rem;
+    background-color: $danger;
+    border-radius: 50%;
+    display: block;
+    text-align: center;
+    align-self: center;
+    font-size: 1rem;
+  }
+}

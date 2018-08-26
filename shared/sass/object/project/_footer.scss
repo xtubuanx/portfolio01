@@ -13,7 +13,6 @@ category:
 
 .p-footer {
   background-color: $site-theme-color;
-
   &-helper {
     margin: 0;
     padding: 0;
@@ -31,7 +30,7 @@ category:
         display: block;
         color: $white;
         @include media-breakpoint-down(sm) {
-          padding: 1rem 0;
+          padding: $input-btn-padding-x-lg;
           text-align: center;
           &:hover {
             text-decoration: none;
@@ -40,6 +39,20 @@ category:
           }
         }
       }
+    }
+  }
+  &-icons {
+    margin: 0 0 20px 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+    > li {
+      margin: 0;
+      padding: 0 15px;
     }
   }
 
@@ -52,10 +65,16 @@ category:
 
 //Country
 .p-dropdown-country {
-  padding: 0.5rem 4rem;
+  width: 95%;
+  margin: 20px 0;
+  padding: $input-btn-padding-x-lg;
   background-color: $site-secondary-color;
   display: inline-block;
-  font-size: 1rem;
+  @include media-breakpoint-up(md) {
+    width: auto;
+    padding: $input-btn-padding-x-sm 4rem;
+    font-size: 1rem;
+  }
   &__title {
     text-align: center;
     font-weight: normal;
@@ -84,5 +103,50 @@ category:
 
   @include media-breakpoint-down(sm) {
     border-top: 1px solid $site-theme-border;
+  }
+}
+
+//pagetop
+.p-pagetop {
+  position: relative;
+  @include media-breakpoint-up(md) {
+    height: 100px;
+  }
+  &--footer {
+    display: block;
+    text-indent: -9999px;
+    position: relative;
+    background: url("../../shared/images/common/leon.png") no-repeat center bottom;
+
+    @include media-breakpoint-up(md) {
+      width: 35px;
+      height: 27px;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @include media-breakpoint-down(sm) {
+      height: 45px;
+      background: #8490a2 url("../../shared/images/common/leon.sp.png") no-repeat center center;
+      background-size: 27px 21px;
+    }
+  }
+  &--fixed {
+    width: 75px;
+    height: 75px;
+    position: fixed;
+    z-index: 9;
+    right: 30px;
+    bottom: 262px;
+    color: #000;
+    display: block;
+    text-indent: -9999px;
+    background: url("../../shared/images/common/pagetop.active.png") no-repeat center center;
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+
   }
 }

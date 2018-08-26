@@ -13,6 +13,7 @@ category:
 
 .p-products-container {
   max-width: $container-max-width;
+  padding-bottom: 80px;
   @include make-container();
 }
 
