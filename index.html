@@ -69,11 +69,11 @@
         <!--.p-headerWidget-helpers-->
     </div>
     <!--.p-header-mainContainer-->
-    <nav class="p-headerWidget-navigation">
+    <nav class="p-headerWidget-navigation" id="js-sticky">
 
 
-        <div class="p-navigation-fixed">
-            <h1 class="p-header-logo fixed"><img src="shared/images/common/logo.svg" alt=""></h1>
+        <div class="p-navigation-stucked">
+            <h1 class="p-header-logo stucked"><img src="shared/images/common/logo.svg" alt=""></h1>
             <ul class="p-header-navigation">
                 <li class="p-header-navigation__item mouseover"><a href="">ニュース</a>
                     <div class="row p-header-navigation__item__contents">
@@ -121,7 +121,7 @@
             </div>
 
 
-            <ul class="p-icons fixed">
+            <ul class="p-icons stucked">
                 <li><a href=""><img src="shared/images/common/link-ig.png" alt="AGATHA公式Instagramへリンク（新しいタブが開きます）"></a>
                 </li>
                 <li><a href=""><img src="shared/images/common/link-fb.png"
@@ -560,9 +560,11 @@
 
 </div>
 <script src="shared/js/jquery.min.js"></script>
+<script src="shared/js/waypoints/jquery.waypoints.js"></script>
+<script src="shared/js/waypoints/sticky.js"></script>
 <!--<script src="shared/js/slick/slick.js"></script>-->
 <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-
+<script src="shared/js/jquery.settings.js"></script>
 <script>
     $('#js-slider-visual').slick({
         dots: true,

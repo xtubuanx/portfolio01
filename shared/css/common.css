@@ -9760,7 +9760,7 @@ a.text-dark:hover, a.text-dark:focus {
     align-content: center;
     align-items: center;
     justify-content: space-between;
-    max-width: 1000px;
+    max-width: calc(1000px + 40px);
     height: 100px;
     margin: 0 auto;
     padding: 0 20px 0 25px;
@@ -9769,7 +9769,7 @@ a.text-dark:hover, a.text-dark:focus {
     width: 166px;
     height: 47px;
   }
-  .p-header-logo.fixed {
+  .p-header-logo.stucked {
     -ms-flex-negative: 0;
     display: none;
     flex-shrink: 0;
@@ -9838,36 +9838,38 @@ a.text-dark:hover, a.text-dark:focus {
     -ms-flex-pack: justify;
     -webkit-box-align: center;
     -ms-flex-align: center;
+    top: -300px;
     align-items: center;
     justify-content: space-between;
     border-top: 1px solid #243958;
   }
-  .p-headerWidget-navigation .p-navigation-fixed {
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
+  .p-headerWidget-navigation .p-navigation-stucked {
+    -ms-flex-pack: distribute;
     -webkit-box-align: center;
     -ms-flex-align: center;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
-    max-width: 1000px;
+    max-width: calc(1000px + 40px);
     margin: 0 auto;
   }
-  .p-headerWidget-navigation.fixed {
+  .p-headerWidget-navigation.stuck {
+    -webkit-transition: top 0.6s;
     z-index: 9;
     position: fixed;
-    top: 0;
+    top: 0px;
     width: 100%;
     padding: 10px 20px 10px 0;
     background-color: #0b2345;
+    transition: top 0.6s;
   }
-  .p-headerWidget-navigation.fixed .p-header-logo.fixed {
+  .p-headerWidget-navigation.stuck .p-header-logo.stucked {
     display: block;
   }
-  .p-headerWidget-navigation.fixed .p-header-navigation__item {
+  .p-headerWidget-navigation.stuck .p-header-navigation__item {
     font-size: 1.4rem;
     white-space: nowrap;
   }
@@ -9889,7 +9891,7 @@ a.text-dark:hover, a.text-dark:focus {
     flex-shrink: 0;
     justify-content: space-between;
   }
-  .p-icons.fixed {
+  .p-icons.stucked {
     display: none;
   }
   .p-icons > li {
