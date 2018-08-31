@@ -105,3 +105,8 @@ category:
     margin-bottom: 0.7rem;
   }
 }
+
+//開いた時、bodyを固定する
+body.is-fixed {
+  overflow: hidden;
+}

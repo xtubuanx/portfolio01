@@ -128,9 +128,7 @@ category:
         display: inline-flex;
         justify-content: space-around;
         align-items: center;
-        //position: relative;
-        //left: 50%;
-        //transform: translateX(-50%);
+
       }
 
       &.sticky,
@@ -143,6 +141,9 @@ category:
         transition: top 2s;
         background-color: $site-theme-color;
 
+        .p-navigation-stuck {
+          justify-content: space-between;
+        }
 
         .p-header-logo.stuck {
           display: block;

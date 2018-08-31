@@ -41,7 +41,7 @@ category:
     }
   }
   &-mainContainer {
-    height: 55px;
+    height: $header-height;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,6 +74,7 @@ category:
     align-items: center;
   }
   &__item {
+    height: $header-height;
     @include media-breakpoint-up(md) {
       display: none;
     }

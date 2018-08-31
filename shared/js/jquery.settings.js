@@ -3,21 +3,22 @@ Waypoints
 http://imakewebthings.com/waypoints/
 */
 $(function () {
-    var clone_element = $('#js-sticky');
+    var clone_element = $('#js-sticky');//固定する要素
+    var waypoint_element = $('#js-waypoint');//Waypointの発火点
     //固定ナビゲーションを複製
     clone_element.clone()
         .insertAfter(clone_element)
         .addClass('sticky-clone')
         .removeAttr('id');
     //Waypoints
-    clone_element.waypoint(function (direction) {
-        var  sticky_element = $('.sticky-clone');
+    waypoint_element.waypoint(function (direction) {
+        var sticky_element = $('.sticky-clone');
         if (direction == 'down') {　//スクロールが下方の場合実行
-             sticky_element.removeClass('sticky-end');
-             sticky_element.addClass('sticky');
+            sticky_element.removeClass('sticky-end');
+            sticky_element.addClass('sticky');
         } else {　//スクロールが上方の場合実行
-             sticky_element.addClass('sticky-end');
-             sticky_element.removeClass('sticky');
+            sticky_element.addClass('sticky-end');
+            sticky_element.removeClass('sticky');
         }// if end
     });
 });
@@ -26,12 +27,15 @@ $(function () {
 
 
 /*
-グローバルナビのドロップダウン
+スマホのトグルナビゲーション
 */
 
 $(function () {
-
-
+    $('#js-toggle-button').on('click', function() {
+        $(this).toggleClass('is-open');
+        $('body').toggleClass('is-fixed');
+        $('#js-toggle-item').slideToggle('fast').toggleClass('is-open');
+    });
 });
 
 //////////////////

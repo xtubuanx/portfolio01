@@ -1,0 +1,69 @@
+@charset "utf-8";
+/*
+---
+name: hamburger
+category:
+  - object
+  - object/component/hamburger
+---
+
+動くハンバーガーアイコンです。
+背景色とバーの色は変数になっています。
+
+*/
+
+.c-hamburger {
+  width: 50px;
+  height: $header-height;
+  padding: 0;
+  position: relative;
+  background: $hamburger-bg-color;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.c-hamburger__bar {
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+.c-hamburger__bar,
+.c-hamburger__bar:before,
+.c-hamburger__bar:after {
+  position: absolute;
+  height: $hamburger-bar-height;
+  width: $hamburger-bar-width;
+  border-radius: $hamburger-bar-radius;
+  background: $hamburger-bar-color;
+  display: block;
+  content: '';
+  cursor: pointer;
+}
+.c-hamburger__bar:before {
+  top: -8px;
+}
+.c-hamburger__bar:after {
+  bottom: -8px;
+}
+/* 状態を制御するチェックボックス*/
+.c-hamburger--check {
+  display: none;
+}
+
+/* 閉じるアニメーション */
+.c-hamburger__bar,
+.c-hamburger__bar:before,
+.c-hamburger__bar:after {
+  transition: all 0.3s;
+}
+.is-open .c-hamburger__bar {
+  background: transparent;
+}
+.is-open .c-hamburger__bar:before {
+  transform: rotate(-45deg);
+  top: 50%;
+}
+.is-open .c-hamburger__bar:after {
+  transform: rotate(45deg);
+  top: 50%;
+}

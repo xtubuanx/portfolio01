@@ -32,6 +32,12 @@ $site-theme-color: #0b2345;
 $site-theme-color--lighten: #183154;
 $site-secondary-color: #6d7b8f;
 $site-theme-border: #243958;
+//ハンバーガーメニュー
+$hamburger-bg-color: transparent;
+$hamburger-bar-color: #fff;
+$hamburger-bar-width: 25px;//線の長さ
+$hamburger-bar-height: 2px;//線の太さ
+$hamburger-bar-radius: 3px;//線の丸み
 
 /*
 Bootstrap media query MEMO
@@ -126,6 +132,9 @@ $grid-breakpoints: (
 @import "object/component/bootstrap/popover";
 //@import "object/component/bootstrap/carousel";
 @import "object/component/bootstrap/print";
+
+
+@import "object/component/hamburger";
 
 /*
  Project

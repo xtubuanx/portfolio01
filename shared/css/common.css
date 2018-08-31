@@ -7597,6 +7597,86 @@ button.close {
 }
 
 /*
+---
+name: hamburger
+category:
+  - object
+  - object/component/hamburger
+---
+
+動くハンバーガーアイコンです。
+背景色とバーの色は変数になっています。
+
+*/
+.c-hamburger {
+  position: relative;
+  width: 50px;
+  height: 55px;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.c-hamburger__bar {
+  -webkit-transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.c-hamburger__bar,
+.c-hamburger__bar:before,
+.c-hamburger__bar:after {
+  display: block;
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  border-radius: 3px;
+  background: #fff;
+  content: '';
+  cursor: pointer;
+}
+
+.c-hamburger__bar:before {
+  top: -8px;
+}
+
+.c-hamburger__bar:after {
+  bottom: -8px;
+}
+
+/* 状態を制御するチェックボックス*/
+.c-hamburger--check {
+  display: none;
+}
+
+/* 閉じるアニメーション */
+.c-hamburger__bar,
+.c-hamburger__bar:before,
+.c-hamburger__bar:after {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.is-open .c-hamburger__bar {
+  background: transparent;
+}
+
+.is-open .c-hamburger__bar:before {
+  -webkit-transform: rotate(-45deg);
+  top: 50%;
+  transform: rotate(-45deg);
+}
+
+.is-open .c-hamburger__bar:after {
+  -webkit-transform: rotate(45deg);
+  top: 50%;
+  transform: rotate(45deg);
+}
+
+/*
  Project
 ----------------------------- */
 /*
@@ -7661,6 +7741,10 @@ category:
 
 .p-headerWidget-helpers, .p-headerWidget-navigation {
   display: none;
+}
+
+.p-header-bar__item {
+  height: 55px;
 }
 
 /*
@@ -7919,6 +8003,10 @@ category:
 
 .p-helper-buttons > li {
   margin-bottom: 0.7rem;
+}
+
+body.is-fixed {
+  overflow: hidden;
 }
 
 /*
@@ -8286,10 +8374,6 @@ category:
 カートのアイコンです
 
 */
-.p-cart-status {
-  display: none;
-}
-
 .p-navigation-cart {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8307,6 +8391,8 @@ category:
   align-self: stretch;
   justify-content: center;
   width: 80px;
+  height: 100%;
+  padding: 20px 0;
 }
 
 .p-navigation-cart__anchor:before {
@@ -8342,6 +8428,24 @@ category:
   font-size: 1rem;
   line-height: 1.6rem;
   text-align: center;
+}
+
+.p-navigation-cart.mouseover:hover .p-cart-status {
+  display: block;
+}
+
+.p-cart-status {
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+  display: block;
+  z-index: 1;
+  position: absolute;
+  top: 90px;
+  right: -10px;
+  width: 260px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+  font-size: 1.4;
 }
 
 /*
@@ -9931,6 +10035,11 @@ a.text-dark:hover, a.text-dark:focus {
     padding: 0 20px;
     background-color: #0b2345;
     transition: top 2s;
+  }
+  .p-headerWidget-navigation.sticky .p-navigation-stuck, .p-headerWidget-navigation.sticky-end .p-navigation-stuck {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
   }
   .p-headerWidget-navigation.sticky .p-header-logo.stuck, .p-headerWidget-navigation.sticky-end .p-header-logo.stuck {
     display: block;

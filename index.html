@@ -16,7 +16,7 @@
 
     <div class="p-header-mainContainer">
 
-        <div class="p-header-bar">
+        <div class="p-header-bar" data-role="スマホのヘッダー">
             <div class="p-header-bar__item">
                 <a href="cart/" class="p-navigation-cart__anchor"><span
                         class="p-navigation-cart__hidden">現在のカートの中身は</span><span
@@ -25,11 +25,11 @@
             </div>
 
             <div class="p-headerWidget-logo">
-                <h1 class="p-header-logo"><img src="shared/images/common/logo.svg" alt=""></h1>
+                <h1 class="p-header-logo"><a href="/"><img src="shared/images/common/logo.svg" alt=""></a></h1>
             </div>
 
-            <div class="p-header-bar__item">
-                三
+            <div class="p-header-bar__item" data-role="ハンバーガーメニュー">
+                <button type="button" class="c-hamburger" id="js-toggle-button"><span class="c-hamburger__bar"></span></button>
             </div>
 
         </div>
@@ -131,34 +131,41 @@
                 <li class="p-header-navigation__item mouseover"><span>コレクションから探す</span>
                     <div class="p-header-navigation__item__contents">
                         <div class="row no-gutters contents-inner p-collection-banners">
-                            <div class="col-sm-3"><a href=""><img src="shared/images/common/header-banner/navi-collection-19.jpg"
-                                                                  alt=""
-                                                                  width="250" height="100"></a></div>
-                            <div class="col-sm-3"><a href=""><img src="shared/images/common/header-banner/navi-collection-19.jpg"
-                                                                  alt=""
-                                                                  width="250" height="100"></a></div>
-                            <div class="col-sm-3"><a href=""><img src="shared/images/common/header-banner/navi-collection-19.jpg"
-                                                                  alt=""
-                                                                  width="250" height="100"></a></div>
-                            <div class="col-sm-3"><a href=""><img src="shared/images/common/header-banner/navi-collection-19.jpg"
-                                                                  alt=""
-                                                                  width="250" height="100"></a></div>
-                            <div class="col-sm-3"><a href=""><img src="shared/images/common/header-banner/navi-collection-19.jpg"
-                                                                  alt=""
-                                                                  width="250" height="100"></a></div>
-                            <div class="col-sm-3"><a href=""><img src="shared/images/common/header-banner/navi-collection-19.jpg"
-                                                                  alt=""
-                                                                  width="250" height="100"></a></div>
-                            <div class="col-sm-3"><a href=""><img src="shared/images/common/header-banner/navi-collection-19.jpg"
-                                                                  alt=""
-                                                                  width="250" height="100"></a></div>
+                            <div class="col-sm-3"><a href=""><img
+                                    src="shared/images/common/header-banner/navi-collection-19.jpg"
+                                    alt=""
+                                    width="250" height="100"></a></div>
+                            <div class="col-sm-3"><a href=""><img
+                                    src="shared/images/common/header-banner/navi-collection-19.jpg"
+                                    alt=""
+                                    width="250" height="100"></a></div>
+                            <div class="col-sm-3"><a href=""><img
+                                    src="shared/images/common/header-banner/navi-collection-19.jpg"
+                                    alt=""
+                                    width="250" height="100"></a></div>
+                            <div class="col-sm-3"><a href=""><img
+                                    src="shared/images/common/header-banner/navi-collection-19.jpg"
+                                    alt=""
+                                    width="250" height="100"></a></div>
+                            <div class="col-sm-3"><a href=""><img
+                                    src="shared/images/common/header-banner/navi-collection-19.jpg"
+                                    alt=""
+                                    width="250" height="100"></a></div>
+                            <div class="col-sm-3"><a href=""><img
+                                    src="shared/images/common/header-banner/navi-collection-19.jpg"
+                                    alt=""
+                                    width="250" height="100"></a></div>
+                            <div class="col-sm-3"><a href=""><img
+                                    src="shared/images/common/header-banner/navi-collection-19.jpg"
+                                    alt=""
+                                    width="250" height="100"></a></div>
                         </div>
                     </div>
                 </li>
                 <li class="p-header-navigation__item"><a href="">ギフトを探す</a></li>
                 <li class="p-header-navigation__item"><a href="">INSTAGRAMから探す</a></li>
             </ul>
-            <div class="p-navigation-cart">
+            <div class="p-navigation-cart mouseover">
                 <a href="cart/" class="p-navigation-cart__anchor"><span
                         class="p-navigation-cart__hidden">現在のカートの中身は</span><span
                         class="p-navigation-cart__number">0</span><span
@@ -183,7 +190,7 @@
         </div>
     </nav>
 </header>
-<main class="p-main">
+<main class="p-main" id="js-waypoint">
     <div class="p-slider-visual" id="js-slider-visual">
         <div><a href=""><img src="shared/images/slider/home-slide-15.jpg" alt=""></a></div>
         <div><a href=""><img src="shared/images/slider/home-slide-16.jpg" alt=""></a></div>
@@ -551,7 +558,7 @@
 </footer>
 
 
-<div class="p-toggle-navigation-container">
+<div class="p-toggle-navigation-container" id="js-toggle-item" data-role="スマホのナビゲーション">
     <aside class="p-toggle-navigation">
         <ul class="p-helper-buttons">
             <li><a href="" class="btn p-button-helper">新規会員登録</a></li>
