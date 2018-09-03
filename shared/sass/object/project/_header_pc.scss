@@ -93,10 +93,11 @@ category:
           z-index: 9;
         }
       }
-      .sticky &__item {
+      .sticky-clone &__item {
         > span, > a {
-          padding-top: 30px;
-          padding-bottom: 30px;
+          height: $header-height-pc;
+          display: table-cell;
+          vertical-align: middle;
         }
       }
 
@@ -146,7 +147,12 @@ category:
         }
 
         .p-header-logo.stuck {
+          height: $header-height-pc;
           display: block;
+          > a {
+            height: $header-height-pc;
+            display: flex;
+          }
         }
 
         .p-header-navigation {
@@ -162,6 +168,8 @@ category:
         transition: top 3s;
       }
       &.sticky-clone {
+        height: $header-height-pc;
+        border-top: none;
         position: fixed;
       }
     }

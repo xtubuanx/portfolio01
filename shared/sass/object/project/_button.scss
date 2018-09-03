@@ -19,3 +19,10 @@ category:
   display: block;
 }
 
+.p-button-cart {
+  width: 100%;
+  padding: $input-btn-padding-x-lg $input-btn-padding-x-lg;
+  background-color: $pink;
+  color: $site-theme-color;
+  display: block;
+}

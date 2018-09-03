@@ -18,7 +18,7 @@ $body-color: #333;
 $font-size-base: 1.3rem; //13px
 $font-family-sans-serif: "Hiragino Kaku Gothic ProN","メイリオ", sans-serif;
 $primary: #285ca6;
-$red:     #ff466b;
+$pink:     #ff587a;
 $orange:  #ff8a00;
 $gray-200: #f2f4f5;
 $transition-base: all .3s ease-in-out;
@@ -26,7 +26,8 @@ $btn-border-radius: 0;
 
 //Original variables
 $body-min-width: 1040px;
-$header-height: 55px;//固定ヘッダーの高さ
+$header-height-pc: 80px;//PCの時の固定ヘッダーの高さ
+$header-height-sp: 55px;//スマホの時の固定ヘッダーの高さ
 $container-max-width: 1000px;
 $site-theme-color: #0b2345;
 $site-theme-color--lighten: #183154;

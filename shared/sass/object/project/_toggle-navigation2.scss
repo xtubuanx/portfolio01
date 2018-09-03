@@ -15,9 +15,9 @@ category:
   width: 100%;
   &-container {
     width: 100%;
-    height: calc(100% - #{$header-height});
-    margin-top: $header-height;
-    margin-bottom: $header-height;
+    height: calc(100% - #{$header-height-sp});
+    margin-top: $header-height-sp;
+    margin-bottom: $header-height-sp;
     padding-bottom: 3rem;
     position: fixed;
     overflow-y: auto;

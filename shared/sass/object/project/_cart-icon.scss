@@ -7,10 +7,9 @@ category:
   - object/project/-icon
 ---
 
-カートのアイコンです
+カートのアイコンとステータスです。
 
 */
-
 
 .p-navigation-cart {
   display: flex;
@@ -28,12 +27,6 @@ category:
       display: block;
       content: url("../../shared/images/common/ico-bag.svg");
     }
-    &:hover {
-      text-decoration: none;
-      &:before {
-        opacity: 0.5;
-      }
-    }
   }
   &__hidden {
     display: none;
@@ -42,7 +35,7 @@ category:
     width: 1.6rem;
     margin-top: -20px;
     line-height: 1.6rem;
-    background-color: $danger;
+    background-color: $pink;
     border-radius: 50%;
     display: block;
     text-align: center;
@@ -51,24 +44,75 @@ category:
   }
 
   &.mouseover {
+    cursor: pointer;
+    &:after {
+      content: '';
+      display: block;
+      border-style: solid;
+      border-width: 6px 6px 0 6px;
+      border-color: #092246 transparent transparent transparent;
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      z-index: 9;
+      transition: bottom 0.3s;
+    }
     &:hover {
+      .p-navigation-cart__anchor:before {
+        text-decoration: none;
+        opacity: 0.5;
+      }
+
+      &:after {
+        bottom: -6px;
+      }
       .p-cart-status {
-        display: block;
+        visibility: visible;
+        opacity: 1;
       }
     }
   }
 }
 
+.sticky-clone .p-navigation-cart__anchor {
+  height: $header-height-pc;
+}
+
 //ステータス
 .p-cart-status {
+  padding-top: 90px;
   width: 260px;
-  display: block;
+  visibility: hidden;
   position: absolute;
-  top: 90px;
+  top: 0;
   right: -10px;
-  padding: 10px;
-  background-color: $white;
-  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
-  z-index: 1;
-  font-size: 1.4rem;
+  opacity: 0;
+  z-index: 9;
+  transition: all 0.3s;
+
+  &__box {
+    padding: 30px 25px;
+    background-color: $white;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    font-size: 1.4rem;
+  }
+
+  &__title {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    font-size: 1.8rem;
+    border-bottom: 1px solid #eee;
+  }
+  &__body {
+    p + p {
+      margin-top: 1.5rem;
+    }
+  }
+  &__number,
+  &__price {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+
 }

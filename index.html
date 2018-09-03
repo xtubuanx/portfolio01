@@ -73,7 +73,7 @@
 
 
         <div class="p-navigation-stuck">
-            <h1 class="p-header-logo stuck"><img src="shared/images/common/logo.svg" alt=""></h1>
+            <h1 class="p-header-logo stuck"><a href="/"><img src="shared/images/common/logo.svg" alt=""></a></h1>
             <ul class="p-header-navigation">
                 <li class="p-header-navigation__item mouseover"><span>ニュース</span>
                     <!--▼▼ニュース　コンテンツエリア▼▼-->
@@ -172,10 +172,15 @@
                         class="p-navigation-cart__hidden">個</span></a>
 
                 <div class="p-cart-status">
-                    <p>ショッピングバッグ</p>
-                    <p>バッグに商品が0件あります。</p>
-                    <p>合計0円（税込）</p>
-                    <p><a href="cart/">バッグを見る</a></p>
+                    <dl class="p-cart-status__box">
+                        <dt class="p-cart-status__title">ショッピングバッグ</dt>
+                        <dd class="p-cart-status__body">
+                            <p>バッグに商品が <span class="p-cart-status__number">0</span> 件あります。</p>
+                            <p>合計 <span class="p-cart-status__price">0</span> 円（税込）</p>
+
+                            <p><a href="cart/" class="btn p-button-cart">バッグを見る</a></p>
+                        </dd>
+                    </dl>
                 </div>
             </div>
 
