@@ -24,14 +24,12 @@ $(function () {
 });
 
 //////////////////
-
-
 /*
 スマホのトグルナビゲーション
 */
 
 $(function () {
-    $('#js-toggle-button').on('click', function() {
+    $('#js-toggle-button').on('click', function () {
         $(this).toggleClass('is-open');
         $('body').toggleClass('is-fixed');
         $('#js-toggle-item').slideToggle('fast').toggleClass('is-open');
@@ -39,3 +37,57 @@ $(function () {
 });
 
 //////////////////
+/*
+ページトップボタン（フェードイン）
+*/
+$(function () {
+    var topBtn = $('#js-pagetop');
+    var footer = $('.p-footer');
+    // フッターの高さ
+    footHeight = footer.height();
+
+    $(window).scroll(function () {
+
+        // ドキュメントの高さ
+        scrollHeight = $(document).height();
+        // ウィンドウの高さ+スクロールした高さ→ 現在のトップからの位置
+        scrollPosition = $(this).height() + $(this).scrollTop();
+
+        // スクロール位置が100pxを超えたら
+        if ($(this).scrollTop() > 100) {
+            topBtn.animate( { opacity: '1' }, 50 ).addClass('is-show');
+        }
+        else {
+            topBtn.animate( { opacity: '0' }, 50 );
+        }
+
+        // スクロール位置がフッターまで来たら
+        if (scrollHeight - scrollPosition <= footHeight) {
+            topBtn.addClass('is-fixed');
+        }
+        else {
+            topBtn.removeClass('is-fixed');
+        }
+
+
+    });
+});
+
+//////////////////
+/*
+スムーススクロール（ヘッダー固定のアンカーリンクのずれ解消）
+*/
+
+$(function () {
+    var headerHight = 60; //ヘッダの高さ
+    $('a[href^="#"]:not(a.js-noScroll)').click(function () {
+        var href = $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top - headerHight; //ヘッダの高さ分位置をずらす
+        $('html, body').animate({
+            scrollTop: position
+        }, 550, 'swing');
+        return false;
+    });
+});
+

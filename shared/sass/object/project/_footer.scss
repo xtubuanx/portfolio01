@@ -138,11 +138,24 @@ category:
     position: fixed;
     z-index: 9;
     right: 30px;
-    bottom: 262px;
     color: #000;
-    display: block;
+    opacity: 0;
     text-indent: -9999px;
-    background: url("../../shared/images/common/pagetop.active.png") no-repeat center center;
+    background: url("../../shared/images/common/pagetop.png") no-repeat center center;
+    transition: all 0.5s;
+
+    &:hover {
+      background: url("../../shared/images/common/pagetop.active.png") no-repeat center center;
+    }
+
+    &.is-show {
+      bottom: 30px;
+      //opacity: 1;
+      //transition: all 0.5s;
+    }
+    &.is-fixed {
+      bottom: 262px;
+    }
 
     @include media-breakpoint-down(sm) {
       display: none;
