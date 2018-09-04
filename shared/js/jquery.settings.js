@@ -55,7 +55,7 @@ $(function () {
 
         // スクロール位置が100pxを超えたら
         if ($(this).scrollTop() > 100) {
-            topBtn.animate( { opacity: '1' }, 50 ).addClass('is-show');
+            topBtn.animate( { opacity: '1' }, 50 );
         }
         else {
             topBtn.animate( { opacity: '0' }, 50 );

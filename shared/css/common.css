@@ -7849,6 +7849,7 @@ category:
   z-index: 9;
   position: fixed;
   right: 30px;
+  bottom: 30px;
   width: 75px;
   height: 75px;
   background: url("../../shared/images/common/pagetop.png") no-repeat center center;
@@ -7860,10 +7861,6 @@ category:
 
 .p-pagetop--fixed:hover {
   background: url("../../shared/images/common/pagetop.active.png") no-repeat center center;
-}
-
-.p-pagetop--fixed.is-show {
-  bottom: 30px;
 }
 
 .p-pagetop--fixed.is-fixed {

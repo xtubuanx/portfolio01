@@ -137,6 +137,7 @@ category:
     height: 75px;
     position: fixed;
     z-index: 9;
+    bottom: 30px;
     right: 30px;
     color: #000;
     opacity: 0;
@@ -148,11 +149,6 @@ category:
       background: url("../../shared/images/common/pagetop.active.png") no-repeat center center;
     }
 
-    &.is-show {
-      bottom: 30px;
-      //opacity: 1;
-      //transition: all 0.5s;
-    }
     &.is-fixed {
       bottom: 262px;
     }
