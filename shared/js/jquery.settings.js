@@ -55,10 +55,10 @@ $(function () {
 
         // スクロール位置が100pxを超えたら
         if ($(this).scrollTop() > 100) {
-            topBtn.animate( { opacity: '1' }, 50 );
+            topBtn.animate({opacity: '1'}, 50);
         }
         else {
-            topBtn.animate( { opacity: '0' }, 50 );
+            topBtn.animate({opacity: '0'}, 50);
         }
 
         // スクロール位置がフッターまで来たら
@@ -91,3 +91,29 @@ $(function () {
     });
 });
 
+
+//////////////////
+/*
+bxslider
+*/
+
+$(function () {
+    $('#js-slider-visual').bxSlider({
+        infiniteLoop: true,
+        controls: false
+    });
+});
+$(function () {
+    $('#js-slider-instagram > .p-instagram-grid').bxSlider({
+        infiniteLoop: true,
+        controls: false,
+        responsive: true,
+        minSlides: 5,
+        maxSlides: 5,
+        moveSlides: 5,
+        slideWidth: 100,
+        slideMargin: 10
+        //slideSelector: '#js-slider-visual',
+    });
+
+});

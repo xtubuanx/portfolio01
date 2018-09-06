@@ -8029,6 +8029,11 @@ category:
 
 スマホ用のカテゴリリストです
 */
+.p-categories {
+  padding-bottom: 60px;
+  border-bottom: 1px solid #dee2e6;
+}
+
 .p-category {
   margin: 0;
 }
@@ -8292,19 +8297,10 @@ Instagramのグリッド表示です。
   width: 100%;
   max-width: 1000px;
   margin-right: auto;
+  margin-bottom: 30px;
   margin-left: auto;
   padding-right: 15px;
   padding-left: 15px;
-}
-
-.p-instagram-grid {
-  -ms-flex-wrap: wrap;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
 }
 
 .p-instagram-grid__item {
@@ -8316,6 +8312,7 @@ Instagramのグリッド表示です。
   padding-right: 15px;
   padding-left: 15px;
   border: 1px solid #fff;
+  background-color: #fff;
   transition: all 0.3s ease-in-out;
 }
 
@@ -8378,7 +8375,7 @@ category:
 name: cart-icon
 category:
   - object
-  - object/project/-icon
+  - object/project/cart-icon
 ---
 
 カートのアイコンとステータスです。
@@ -8533,6 +8530,11 @@ category:
   color: #0b2345;
 }
 
+.p-button-lg {
+  padding: 1rem 5rem;
+  font-size: 1.6rem;
+}
+
 /*
 ---
 name: title
@@ -8552,6 +8554,57 @@ category:
 
 .p-title-home.lv1 {
   font-size: 4rem;
+}
+
+/*
+---
+name: slider
+category:
+  - object
+  - object/project/slider
+---
+
+スライダー用。
+
+*/
+.p-slider-visual .bx-wrapper {
+  -webkit-box-shadow: none;
+  border: none;
+  background: none;
+  box-shadow: none;
+}
+
+.p-slider-visual .bx-viewport {
+  height: 520px;
+}
+
+.p-slider-visual .bx-viewport li {
+  overflow: hidden;
+}
+
+.p-slider-visual .bx-viewport img {
+  position: relative;
+  left: 50%;
+  width: 1400px;
+  max-width: none;
+  height: 520px;
+  margin-left: -700px;
+}
+
+.p-slider-visual .bx-wrapper .bx-pager {
+  bottom: 20px;
+}
+
+.p-slider-visual .bx-wrapper .bx-pager.bx-default-pager a {
+  margin: 0 7.5px;
+  background: #fff;
+  opacity: 0.5;
+}
+
+.p-slider-visual .bx-wrapper .bx-pager.bx-default-pager a:hover, .p-slider-visual .bx-wrapper .bx-pager.bx-default-pager a.active, .p-slider-visual .bx-wrapper .bx-pager.bx-default-pager a:focus {
+  border-color: #eee;
+  background: #fff;
+  opacity: 1;
 }
 
 /*
@@ -10196,10 +10249,11 @@ a.text-dark:hover, a.text-dark:focus {
     content: url("../../shared/images/common/product-list-over.png");
   }
   .p-instagram-grid__item {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 25%;
-    flex: 0 0 25%;
-    max-width: 25%;
+    -ms-flex-preferred-size: calc((100%  / 5) -  5px);
+    flex-basis: calc((100%  / 5) -  5px);
+    max-width: calc((100%  / 5) -  5px);
+    margin-right: 5px;
+    margin-bottom: 5px;
   }
   .d-md-none {
     display: none !important;
@@ -10728,11 +10782,21 @@ a.text-dark:hover, a.text-dark:focus {
   .p-pagetop--fixed {
     display: none;
   }
+  .p-instagram {
+    padding-bottom: 30px;
+  }
   .p-instagram-grid__item {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 33.33333%;
     flex: 0 0 33.33333%;
     max-width: 33.33333%;
+  }
+  .p-slider-visual .bx-viewport img {
+    position: static;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin-left: 0;
   }
 }
 

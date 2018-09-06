@@ -10,6 +10,11 @@ category:
 スマホ用のカテゴリリストです
 */
 
+.p-categories {
+  padding-bottom: 60px;
+  border-bottom: 1px solid $gray-300;
+}
+
 .p-category {
   margin: 0;
 

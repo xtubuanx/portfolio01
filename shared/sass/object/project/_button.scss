@@ -26,3 +26,8 @@ category:
   color: $site-theme-color;
   display: block;
 }
+
+.p-button-lg {
+  padding: $input-btn-padding-x-lg 5rem;
+  font-size: 1.6rem;
+}
