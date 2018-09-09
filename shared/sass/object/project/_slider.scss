@@ -11,44 +11,16 @@ category:
 
 */
 .p-slider-visual {
-  .bx-wrapper {
-    box-shadow: none;
-    background: none;
-    border: none;
-  }
-  .bx-viewport {
-    height: 520px;
-    li {
-      overflow: hidden;
-    }
+  @include media-breakpoint-up(md) {
     img {
       max-width: none;
       width: 1400px;
       height: 520px;
-      margin-left: -700px;
       left: 50%;
+      transform: translateX(-50%);
       position: relative;
-
-      @include media-breakpoint-down(sm) {
-        width: 100%;
-        height: 100%;
-        position: static;
-        left: 0;
-        margin-left: 0;
-      }
+      overflow: hidden;
     }
-  }
-  .bx-wrapper .bx-pager {
-    bottom: 20px;
-  }
-  .bx-wrapper .bx-pager.bx-default-pager a {
-    margin: 0 7.5px;
-    background: #fff;
-    opacity: 0.5;
-  }
-  .bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus {
-    background: #fff;
-    border-color: #eee;
-    opacity: 1;
+
   }
 }

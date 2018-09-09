@@ -156,11 +156,13 @@ $grid-breakpoints: (
 @import "object/project/title";
 
 
-//トップページ用
-@import "object/project/slider";
+//トップページ用slick.scss
 @import "object/project/pickup";
 
-
+//Slick
+@import "object/project/js-slick";
+@import "object/project/js-slick-theme";
+@import "object/project/slider";
 
 /*
  Utility
