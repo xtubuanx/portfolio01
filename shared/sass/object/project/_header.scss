@@ -11,6 +11,8 @@ category:
 
 */
 
+$information-height: (1.5rem + (0.4rem * 2));
+
 .p-header {
   background-color: $site-theme-color;
 
@@ -20,6 +22,11 @@ category:
     top: 0;
     left: 0;
     z-index: 999;
+    transition: all 0.5s;
+
+    &.sticky {
+      top: calc(-1 * #{$information-height});
+    }
   }
   * {
     margin: 0;
@@ -37,7 +44,7 @@ category:
     font-size: 1rem;
 
     @include media-breakpoint-down(sm) {
-      display: none;
+      height: $information-height;
     }
   }
   &-mainContainer {
@@ -45,11 +52,13 @@ category:
     display: flex;
     justify-content: center;
     align-items: center;
+
   }
   &-logo {
     width: 84px;
     height: auto;
     display: inline-block;
+    line-height: 24px;
     > img {
       vertical-align: initial;
     }

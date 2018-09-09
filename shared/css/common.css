@@ -7729,6 +7729,7 @@ category:
   display: inline-block;
   width: 84px;
   height: auto;
+  line-height: 24px;
 }
 
 .p-header-logo > img {
@@ -10982,14 +10983,19 @@ a.text-dark:hover, a.text-dark:focus {
     padding-left: 0;
   }
   .p-header {
+    -webkit-transition: all 0.5s;
     z-index: 999;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    transition: all 0.5s;
+  }
+  .p-header.sticky {
+    top: calc(-1 * 2.3rem);
   }
   .p-header-information {
-    display: none;
+    height: 2.3rem;
   }
   .p-header-bar {
     -webkit-box-pack: justify;

@@ -3,22 +3,25 @@ Waypoints
 http://imakewebthings.com/waypoints/
 */
 $(function () {
-    var clone_element = $('#js-sticky');//固定する要素
+    var sticky_element_pc = $('#js-sticky-pc');//PCのとき固定する要素
     var waypoint_element = $('#js-waypoint');//Waypointの発火点
+    var sticky_element_sp = $('#js-sticky-sp');//スマホのとき固定する要素
     //固定ナビゲーションを複製
-    clone_element.clone()
-        .insertAfter(clone_element)
+    sticky_element_pc.clone()
+        .insertAfter(sticky_element_pc)
         .addClass('sticky-clone')
         .removeAttr('id');
-    //Waypoints
+    //PCのとき
     waypoint_element.waypoint(function (direction) {
-        var sticky_element = $('.sticky-clone');
+        var clone_sticky_element_pc = $('.sticky-clone');
         if (direction == 'down') {　//スクロールが下方の場合実行
-            sticky_element.removeClass('sticky-end');
-            sticky_element.addClass('sticky');
+            //clone_sticky_element_pc.removeClass('sticky-end');
+            clone_sticky_element_pc.addClass('sticky');
+            sticky_element_sp.addClass('sticky');
         } else {　//スクロールが上方の場合実行
-            sticky_element.addClass('sticky-end');
-            sticky_element.removeClass('sticky');
+            //clone_sticky_element_pc.addClass('sticky-end');
+            clone_sticky_element_pc.removeClass('sticky');
+            sticky_element_sp.removeClass('sticky');
         }// if end
     });
 });
