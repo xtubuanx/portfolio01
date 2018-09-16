@@ -7914,12 +7914,17 @@ category:
   top: 0;
   left: 0;
   width: 100%;
-  height: calc(100% - 55px);
-  margin-top: 55px;
+  height: calc(100% - 55px + 2.3rem);
+  margin-top: calc(55px + 2.3rem);
   margin-bottom: 55px;
   padding-bottom: 3rem;
   overflow-y: auto;
   background-color: #183154;
+}
+
+.p-toggle-navigation-container.sticky {
+  height: calc(100% - 55px);
+  margin-top: 55px;
 }
 
 .p-navigation-category {

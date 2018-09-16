@@ -6,6 +6,7 @@ $(function () {
     var sticky_element_pc = $('#js-sticky-pc');//PCのとき固定する要素
     var waypoint_element = $('#js-waypoint');//Waypointの発火点
     var sticky_element_sp = $('#js-sticky-sp');//スマホのとき固定する要素
+    var navigation_sp = $('#js-toggle-item');//スマホの展開したナビゲーション
     //固定ナビゲーションを複製
     sticky_element_pc.clone()
         .insertAfter(sticky_element_pc)
@@ -18,10 +19,12 @@ $(function () {
             //clone_sticky_element_pc.removeClass('sticky-end');
             clone_sticky_element_pc.addClass('sticky');
             sticky_element_sp.addClass('sticky');
+            navigation_sp.addClass('sticky');
         } else {　//スクロールが上方の場合実行
             //clone_sticky_element_pc.addClass('sticky-end');
             clone_sticky_element_pc.removeClass('sticky');
             sticky_element_sp.removeClass('sticky');
+            navigation_sp.removeClass('sticky');
         }// if end
     });
 });

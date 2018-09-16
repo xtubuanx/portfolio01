@@ -15,8 +15,8 @@ category:
   width: 100%;
   &-container {
     width: 100%;
-    height: calc(100% - #{$header-height-sp});
-    margin-top: $header-height-sp;
+    height: calc(100% - #{$header-height-sp} + 2.3rem);
+    margin-top: calc(#{$header-height-sp} + 2.3rem);
     margin-bottom: $header-height-sp;
     padding-bottom: 3rem;
     position: fixed;
@@ -26,6 +26,12 @@ category:
     z-index: 10;
     background-color: $site-theme-color--lighten;
     display: none;
+
+    &.sticky {
+      height: calc(100% - #{$header-height-sp});
+      margin-top: $header-height-sp;
+    }
+
     @include media-breakpoint-up(md) {
       display: none!important;
     }
