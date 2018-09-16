@@ -7880,11 +7880,6 @@ category:
 
 */
 
-.p-collection-banners img {
-  width: 100%;
-  height: auto;
-}
-
 /*
 ---
 name: footer_pc
@@ -8048,11 +8043,17 @@ category:
   font-size: 1.2rem;
   font-weight: normal;
   text-align: center;
+  cursor: pointer;
 }
 
 .p-category__title.is-close:after {
   float: right;
   content: '+';
+}
+
+.p-category__title.is-open:after {
+  float: right;
+  content: '−';
 }
 
 .p-category__body {
@@ -8434,6 +8435,33 @@ category:
   margin-bottom: 0;
   color: #6c757d;
   font-weight: bold;
+}
+
+/*
+---
+name: collection-banners
+category:
+  - object
+  - object/project/collection-banners
+---
+
+コレクションバナーです。
+
+*/
+.p-header-navigation .p-collection-banners img {
+  width: 100%;
+  height: auto;
+}
+
+.p-collection-banners {
+  margin: 0;
+  padding: 0;
+}
+
+.p-collection-banners > li {
+  display: block;
+  margin: 1rem 0;
+  text-align: center;
 }
 
 /*
@@ -10586,7 +10614,7 @@ a.text-dark:hover, a.text-dark:focus {
     color: #000;
   }
   .p-toggle-navigation-container {
-    display: none;
+    display: none !important;
   }
   .p-products-grid__item {
     -webkit-box-flex: 0;

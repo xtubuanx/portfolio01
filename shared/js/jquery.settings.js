@@ -156,33 +156,17 @@ function slider_instagram(){
                 slidesToScroll: 4
             }
         }
-        // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
     ]
 });
 }
 
 
-// set mobile autoplay
 var bp = [{breakpoint: 992, settings: "unslick"}];
-
-
-
-// start autoplay when slider is scrolled into view
-// $(window).resize(function() {
-//     $('#js-slider-instagram').slick('slickSetOption', 'responsive', bp, true);
-// });
-
 
 function sliderSetting(){
     var width = $(window).width();
     if(width <= 767){
         slider_instagram();
-        //alert('aaa');
-    }else{
-        //slider_instagram();
-        $('#js-slider-instagram.slick-initialized').slick('unslick');
     }
 }
 
@@ -193,6 +177,23 @@ sliderSetting();
 $(window).resize( function() {
     sliderSetting();
 });
+
+
+//////////////////
+/*
+カテゴリーリストのアコーディオン
+*/
+
+$(function () {
+    $('.js-accordion').on('click', function () {
+        $(this).toggleClass('is-open is-close');
+        $(this).next().slideToggle('fast').toggleClass('is-open');
+    });
+});
+
+
+
+
 
 //////////////////
 /*

@@ -27,9 +27,14 @@ category:
     text-align: center;
     font-size: 1.2rem;
     display: block;
+    cursor: pointer;
     
     &.is-close:after {
       content: '+';
+      float: right;
+    }
+    &.is-open:after {
+      content: '−';
       float: right;
     }
   }

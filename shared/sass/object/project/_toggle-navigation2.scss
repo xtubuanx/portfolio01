@@ -27,7 +27,7 @@ category:
     background-color: $site-theme-color--lighten;
     display: none;
     @include media-breakpoint-up(md) {
-      display: none;
+      display: none!important;
     }
 
   }
