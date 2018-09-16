@@ -1,3 +1,4 @@
+@charset "utf-8";
 /* Slider */
 
 .slick-slider {
@@ -52,6 +53,13 @@
   margin-left: auto;
   margin-right: auto;
 
+  //おすすめ商品のスライダー
+  @include media-breakpoint-down(sm) {
+    .p-recommend & {
+      //margin-left: -3.5% !important;
+    }
+  }
+
   &:before,
   &:after {
     content: "";
@@ -71,15 +79,26 @@
   float: left;
   height: 100%;
   min-height: 1px;
+
+  //おすすめ商品のスライダー
+  @include media-breakpoint-down(sm) {
+    .p-recommend & {
+      //width: 115px!important;
+    }
+  }
+
+
   [dir="rtl"] & {
     float: right;
   }
   @include media-breakpoint-up(md) {
-    > div {
+    //メインビジュアルのスライダー
+    .p-slider-visual & > div {
       position: relative;
       height: 520px;
       overflow: hidden;
     }
+
   }
   img {
     display: block;

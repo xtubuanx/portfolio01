@@ -1,43 +1,50 @@
 @charset "utf-8";
 /*
 ---
-name: products-grid
+name: recommend-grid
 category:
   - object
-  - object/project/products-grid
+  - object/project/recommend-grid
 ---
 
-商品一覧のグリッド表示です。
+おすすめ商品のグリッド表示です。
 
 */
 
-.p-products-container {
-  max-width: $container-max-width;
-  padding-bottom: 80px;
-  @include make-container();
+.p-recommend {
+  background-color: $gray-200;
 }
 
-.p-products-grid {
-  @include make-row();
+.p-recommend-container {
+  max-width: $container-max-width;
+  padding-bottom: 80px;
+  @include media-breakpoint-up(md) {
+    @include make-container();
+  }
+}
+
+.p-recommend-grid {
+ // @include make-row();
 
 
   &__item {
     //max-width: 250px;
-    @include make-col-ready();
-
-
-    @include media-breakpoint-down(xs) {
-      @include make-col(6);
-    }
-    @include media-breakpoint-only(sm) {
-      @include make-col(4);
-    }
-    @include media-breakpoint-up(md) {
-      @include make-col(3);
-    }
+    //@include make-col-ready();
+    //
+    //
+    //@include media-breakpoint-down(xs) {
+    //  @include make-col(6);
+    //}
+    //@include media-breakpoint-only(sm) {
+    //  @include make-col(4);
+    //}
+    //@include media-breakpoint-up(md) {
+    //  @include make-col(3);
+    //}
 
     position: relative;
-    border: 1px solid transparent;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
     transition: $transition-base;
     &.mouseover:hover {
       border: 1px solid $gray-300;
@@ -99,7 +106,7 @@ category:
 
 }
 
-.p-products-info {
+.p-recommend-info {
   height: 100%;
   padding: 1rem;
   display: flex;

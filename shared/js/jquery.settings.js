@@ -101,30 +101,59 @@ slick.js
 */
 $('#js-slider-visual').slick({
     dots: true,
-    arrows: false,
+    arrows: false
 });
-$('#js-slider-instagram').slick({
-    dots: true,
-    arrows: false,
-    mobileFirst: true,
-    slidesToShow: 6,
-    slidesToScroll: 6,
+
+
+$('#js-slider-recommend').slick({
+    slidesToShow: 5,
+    slidesToScroll: 5,
+    //mobileFirst: true,
     responsive: [
         {
-            breakpoint: 1024,
-            /*
+            breakpoint: 768,
             settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                //unslick: "true"
-            }*/
-            settings: 'unslick'
+                dots: true,
+                arrows: false,
+                slidesToShow: 6,
+                slidesToScroll: 6
+            }
         },
         {
-            breakpoint: 991,
+            breakpoint: 576,
             settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
+                dots: true,
+                slidesToShow: 4,
+                slidesToScroll: 4
+            }
+        }
+    ]
+});
+
+function slider_instagram(){
+    $('#js-slider-instagram').slick({
+    dots: true,
+    arrows: false,
+    //mobileFirst: true,
+    //slidesToShow: 6,
+    //slidesToScroll: 6,
+    responsive: [
+        {
+            breakpoint: 3000,
+            settings: "unslick"
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 6,
+                slidesToScroll: 3
+            }
+        },
+        {
+            breakpoint: 576,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 4
             }
         }
         // You can unslick at a given breakpoint now by adding:
@@ -132,8 +161,38 @@ $('#js-slider-instagram').slick({
         // instead of a settings object
     ]
 });
+}
 
 
+// set mobile autoplay
+var bp = [{breakpoint: 992, settings: "unslick"}];
+
+
+
+// start autoplay when slider is scrolled into view
+// $(window).resize(function() {
+//     $('#js-slider-instagram').slick('slickSetOption', 'responsive', bp, true);
+// });
+
+
+function sliderSetting(){
+    var width = $(window).width();
+    if(width <= 767){
+        slider_instagram();
+        //alert('aaa');
+    }else{
+        //slider_instagram();
+        $('#js-slider-instagram.slick-initialized').slick('unslick');
+    }
+}
+
+// 初期表示時の実行
+sliderSetting();
+
+// リサイズ時の実行
+$(window).resize( function() {
+    sliderSetting();
+});
 
 //////////////////
 /*

@@ -8273,10 +8273,6 @@ category:
   font-weight: bold;
 }
 
-.p-recommend {
-  background-color: #f2f4f5;
-}
-
 /*
 ---
 name: instagram-grid
@@ -8295,30 +8291,149 @@ Instagramのグリッド表示です。
 }
 
 .p-instagram-container {
-  width: 100%;
   max-width: 1000px;
-  margin-right: auto;
   margin-bottom: 30px;
-  margin-left: auto;
-  padding-right: 15px;
-  padding-left: 15px;
 }
 
 .p-instagram-grid__item {
   -webkit-transition: all 0.3s ease-in-out;
   position: relative;
-  position: relative;
-  width: 100%;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-  border: 1px solid #fff;
-  background-color: #fff;
   transition: all 0.3s ease-in-out;
 }
 
 .p-instagram-grid__item.mouseover:hover {
   border: 1px solid #dee2e6;
+}
+
+/*
+---
+name: recommend-grid
+category:
+  - object
+  - object/project/recommend-grid
+---
+
+おすすめ商品のグリッド表示です。
+
+*/
+.p-recommend {
+  background-color: #f2f4f5;
+}
+
+.p-recommend-container {
+  max-width: 1000px;
+  padding-bottom: 80px;
+}
+
+.p-recommend-grid__item {
+  -webkit-transition: all 0.3s ease-in-out;
+  position: relative;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.p-recommend-grid__item.mouseover:hover {
+  border: 1px solid #dee2e6;
+}
+
+.p-recommend-grid__link {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  -ms-flex-wrap: wrap;
+  -webkit-transition: all 0.3s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.p-recommend-grid__link.p-label {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.p-recommend-grid__link.p-label.new:before {
+  color: #ff8a00;
+  content: 'NEW';
+}
+
+.p-recommend-grid__link.p-label:before {
+  z-index: 0;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 42px;
+  border: 1px solid #ff8a00;
+  border-radius: 50%;
+  background-color: #fff;
+  font-size: 1.4rem;
+  line-height: 42px;
+  text-align: center;
+}
+
+.p-recommend-grid__link:hover {
+  text-decoration: none;
+  opacity: 1;
+}
+
+.p-recommend-grid__link:hover .mouseover {
+  background-color: rgba(255, 255, 255, 0.8);
+  opacity: 1;
+}
+
+.p-recommend-info {
+  -ms-flex-wrap: wrap;
+  -ms-flex-item-align: end;
+  -ms-flex-line-pack: end;
+  -webkit-transition: all 0.3s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 2;
+  position: relative;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  align-self: flex-end;
+  height: 100%;
+  padding: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.p-recommend-info.mouseover:after {
+  -webkit-transform: translate(-50%, -50%);
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-transition: all 0.3s ease-in-out;
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease-in-out;
+}
+
+.p-recommend-info.mouseover:hover:after {
+  opacity: 1;
+}
+
+.p-recommend-info__name {
+  color: #333;
+  font-size: 1.4rem;
+  font-weight: normal;
+}
+
+.p-recommend-info__price {
+  margin-bottom: 0;
+  color: #6c757d;
+  font-weight: bold;
 }
 
 /*
@@ -8789,13 +8904,17 @@ category:
   -webkit-transform: translateX(-50%);
   display: block;
   position: absolute;
-  bottom: 20px;
+  bottom: -25px;
   left: 50%;
   margin: 0;
   padding: 0;
   transform: translateX(-50%);
   list-style: none;
   text-align: center;
+}
+
+.p-slider-visual .slick-dots {
+  bottom: 20px;
 }
 
 .slick-dots li {
@@ -10484,6 +10603,20 @@ a.text-dark:hover, a.text-dark:focus {
   .p-products-info.mouseover:after {
     content: url("../../shared/images/common/product-list-over.png");
   }
+  .p-instagram-container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .p-instagram-grid {
+    -ms-flex-wrap: wrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+  }
   .p-instagram-grid__item {
     -ms-flex-preferred-size: calc((100%  / 5) -  5px);
     flex-basis: calc((100%  / 5) -  5px);
@@ -10491,7 +10624,23 @@ a.text-dark:hover, a.text-dark:focus {
     margin-right: 5px;
     margin-bottom: 5px;
   }
-  .slick-slide > div {
+  .p-recommend-container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .p-recommend-info.mouseover {
+    position: absolute;
+  }
+  .p-recommend-info.mouseover, .p-recommend-info.mouseover:after {
+    opacity: 0;
+  }
+  .p-recommend-info.mouseover:after {
+    content: url("../../shared/images/common/product-list-over.png");
+  }
+  .p-slider-visual .slick-slide > div {
     position: relative;
     height: 520px;
     overflow: hidden;
@@ -11042,10 +11191,8 @@ a.text-dark:hover, a.text-dark:focus {
     padding-bottom: 30px;
   }
   .p-instagram-grid__item {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 33.33333%;
-    flex: 0 0 33.33333%;
-    max-width: 33.33333%;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
   }
 }
 
@@ -13340,12 +13487,6 @@ a.text-dark:hover, a.text-dark:focus {
     padding-left: 0;
   }
   .p-products-grid__item {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 50%;
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-  .p-instagram-grid__item {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 50%;
     flex: 0 0 50%;

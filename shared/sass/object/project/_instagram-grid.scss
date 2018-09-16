@@ -22,23 +22,20 @@ Instagramのグリッド表示です。
 &-container {
   max-width: $container-max-width;
   margin-bottom: 30px;
-  @include make-container();
+  @include media-breakpoint-up(md) {
+    @include make-container();
+  }
 }
 
 &-grid {
-  //@include make-row();
+
+  @include media-breakpoint-up(md) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
   &__item {
-    //max-width: 250px;
-    background-color: $white;
-    @include make-col-ready();
-
-    @include media-breakpoint-down(xs) {
-      @include make-col(6);
-    }
-    @include media-breakpoint-down(sm) {
-      @include make-col(4);
-    }
+    //background-color: $white;
     @include media-breakpoint-up(md) {
       //@include make-col(3);
       //5カラムにする
@@ -49,8 +46,11 @@ Instagramのグリッド表示です。
     }
 
     position: relative;
-    border: 1px solid $white;
     transition: $transition-base;
+    @include media-breakpoint-down(sm) {
+      border-right: 5px solid transparent;
+      border-left: 5px solid transparent;
+    }
     &.mouseover:hover {
       border: 1px solid $gray-300;
     }
