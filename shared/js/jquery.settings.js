@@ -187,8 +187,8 @@ $(window).resize( function() {
 */
 
 $(function () {
-    $('.js-language').on('click', function () {
-        $(this).toggleClass('is-open is-close');
+    $('.js-country').on('click', function () {
+        $(this).parent().toggleClass('is-open is-close');
         $(this).next().slideToggle('fast').toggleClass('is-open');
     });
 });

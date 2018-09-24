@@ -25,6 +25,9 @@ category:
         + li {
           border-top: 1px solid rgba($black, 0.3);
         }
+        &:last-child {
+          border-bottom: 1px solid rgba($black, 0.3);
+        }
       }
       > a {
         display: block;
@@ -42,7 +45,7 @@ category:
     }
   }
   &-icons {
-    margin: 0 0 20px 0;
+    margin: 20px 0;
     padding: 0;
     display: flex;
     justify-content: center;
@@ -65,31 +68,90 @@ category:
 
 //Country
 .p-dropdown-country {
-  width: 95%;
-  margin: 20px 0;
-  padding: $input-btn-padding-x-lg;
-  background-color: $site-secondary-color;
+  margin: 20px 0 0 0;
   display: inline-block;
+  border: 1px solid transparent;
+
+  &.is-open {
+    border: 1px solid $gray-600;
+  }
+
   @include media-breakpoint-up(md) {
     width: auto;
-    padding: $input-btn-padding-x-sm 4rem;
     font-size: 1rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @include media-breakpoint-down(sm) {
+    width: 95%;
   }
   &__title {
+    padding: $input-btn-padding-x-lg;
     text-align: center;
     font-weight: normal;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    background-color: $site-secondary-color;
+    transition: all 0.3s;
+
+    .is-open > & {
+      background-color: $white;
+    }
+
+    @include media-breakpoint-up(md) {
+      width: 114px;
+      padding: $input-btn-padding-x-sm 0;
+      text-align: center;
+      display: inline-block;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 6px;
+      transform: translateY(-50%);
+      display: block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-color: #3b4e6a transparent transparent transparent;
+      border-width: 5px 5px 0 5px;
+
+      @include media-breakpoint-up(md) {
+        border-width: 3px 2.5px 0 2.5px;
+      }
+    }
   }
   &__body {
     display: none;
+    margin: 0;
   }
   &__list {
     margin: 0;
     padding: 0;
+    background-color: $white;
+
+    @include media-breakpoint-up(md) {
+      width: 114px;
+      display: inline-block;
+    }
     > li {
       margin: 0;
       padding: 0;
       display: block;
       text-align: center;
+      a {
+        display: block;
+        padding: $input-btn-padding-x-lg;
+        color: inherit;
+        text-align: center;
+
+        @include media-breakpoint-up(md) {
+          padding: 0.3rem 0;
+        }
+      }
     }
   }
 }
@@ -100,6 +162,11 @@ category:
   color: $site-secondary-color;
   text-align: center;
   display: block;
+  
+  @include media-breakpoint-up(md) {
+    margin-top: 60px;
+  }
+
 
   @include media-breakpoint-down(sm) {
     border-top: 1px solid $site-theme-border;

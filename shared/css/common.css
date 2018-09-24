@@ -7784,7 +7784,7 @@ category:
   display: -ms-flexbox;
   display: flex;
   justify-content: center;
-  margin: 0 0 20px 0;
+  margin: 20px 0;
   padding: 0;
 }
 
@@ -7800,30 +7800,67 @@ category:
 
 .p-dropdown-country {
   display: inline-block;
-  width: 95%;
-  margin: 20px 0;
-  padding: 1rem;
-  background-color: #6d7b8f;
+  margin: 20px 0 0 0;
+  border: 1px solid transparent;
+}
+
+.p-dropdown-country.is-open {
+  border: 1px solid #6c757d;
 }
 
 .p-dropdown-country__title {
+  -webkit-transition: all 0.3s;
+  display: block;
+  position: relative;
+  padding: 1rem;
+  background-color: #6d7b8f;
   font-weight: normal;
   text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.is-open > .p-dropdown-country__title {
+  background-color: #fff;
+}
+
+.p-dropdown-country__title:after {
+  -webkit-transform: translateY(-50%);
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 6px;
+  width: 0;
+  height: 0;
+  transform: translateY(-50%);
+  border-width: 5px 5px 0 5px;
+  border-style: solid;
+  border-color: #3b4e6a transparent transparent transparent;
+  content: "";
 }
 
 .p-dropdown-country__body {
   display: none;
+  margin: 0;
 }
 
 .p-dropdown-country__list {
   margin: 0;
   padding: 0;
+  background-color: #fff;
 }
 
 .p-dropdown-country__list > li {
   display: block;
   margin: 0;
   padding: 0;
+  text-align: center;
+}
+
+.p-dropdown-country__list > li a {
+  display: block;
+  padding: 1rem;
+  color: inherit;
   text-align: center;
 }
 
@@ -10387,9 +10424,31 @@ a.text-dark:hover, a.text-dark:focus {
     display: none;
   }
   .p-dropdown-country {
+    -webkit-transform: translateX(-50%);
+    position: absolute;
+    left: 50%;
     width: auto;
-    padding: 0.5rem 4rem;
+    transform: translateX(-50%);
     font-size: 1rem;
+  }
+  .p-dropdown-country__title {
+    display: inline-block;
+    width: 114px;
+    padding: 0.5rem 0;
+    text-align: center;
+  }
+  .p-dropdown-country__title:after {
+    border-width: 3px 2.5px 0 2.5px;
+  }
+  .p-dropdown-country__list {
+    display: inline-block;
+    width: 114px;
+  }
+  .p-dropdown-country__list > li a {
+    padding: 0.3rem 0;
+  }
+  .p-copyright {
+    margin-top: 60px;
   }
   .p-pagetop {
     height: 100px;
@@ -11201,6 +11260,9 @@ a.text-dark:hover, a.text-dark:focus {
   .p-footer-helper > li + li {
     border-top: 1px solid rgba(0, 0, 0, 0.3);
   }
+  .p-footer-helper > li:last-child {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  }
   .p-footer-helper > li > a {
     padding: 1rem;
     text-align: center;
@@ -11210,6 +11272,9 @@ a.text-dark:hover, a.text-dark:focus {
     transform: opacity 0.15s linear;
     text-decoration: none;
     opacity: 0.8;
+  }
+  .p-dropdown-country {
+    width: 95%;
   }
   .p-copyright {
     border-top: 1px solid #243958;
