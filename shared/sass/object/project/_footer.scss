@@ -162,7 +162,7 @@ category:
   color: $site-secondary-color;
   text-align: center;
   display: block;
-  
+
   @include media-breakpoint-up(md) {
     margin-top: 60px;
   }
