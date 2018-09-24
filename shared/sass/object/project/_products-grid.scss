@@ -140,11 +140,19 @@ category:
     font-weight: normal;
     font-size: 1.4rem;
     color: $body-color;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 1.2rem;
+    }
   }
 
   &__price {
     margin-bottom: 0;
     color: $gray-600;
     font-weight: bold;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 1.1rem;
+    }
   }
 }

@@ -111,10 +111,9 @@ $('#js-slider-visual').slick({
 $('#js-slider-recommend').slick({
     slidesToShow: 5,
     slidesToScroll: 5,
-    //mobileFirst: true,
     responsive: [
         {
-            breakpoint: 768,
+            breakpoint: 767,
             settings: {
                 dots: true,
                 arrows: false,
@@ -123,7 +122,7 @@ $('#js-slider-recommend').slick({
             }
         },
         {
-            breakpoint: 576,
+            breakpoint: 575,
             settings: {
                 dots: true,
                 slidesToShow: 4,
@@ -184,51 +183,12 @@ $(window).resize( function() {
 
 //////////////////
 /*
-カテゴリーリストのアコーディオン
+言語選択
 */
 
 $(function () {
-    $('.js-accordion').on('click', function () {
+    $('.js-language').on('click', function () {
         $(this).toggleClass('is-open is-close');
         $(this).next().slideToggle('fast').toggleClass('is-open');
     });
 });
-
-
-
-
-
-//////////////////
-/*
-bxslider
-*/
-//
-// jQuery(document).ready(function($){
-//     // $('#js-slider-visual').bxSlider({
-//     //     infiniteLoop: true,
-//     //     controls: false
-//     // });
-//     $('#js-slider-instagram').bxSlider({
-//         useCSS: false,
-//         preventDefaultSwipeY: false,
-//         responsive: true,
-//         minSlides: 5,
-//         maxSlides: 6,
-//         slideWidth: 100,
-//         moveSlides: 6
-//     });
-// });
-// // $(function () {
-// //     $('#js-slider-instagram > .p-instagram-grid').bxSlider({
-// //         infiniteLoop: true,
-// //         controls: false,
-// //         responsive: true,
-// //         minSlides: 5,
-// //         maxSlides: 5,
-// //         moveSlides: 5,
-// //         slideWidth: 100,
-// //         slideMargin: 10
-// //         //slideSelector: '#js-slider-visual',
-// //     });
-// //
-// // });

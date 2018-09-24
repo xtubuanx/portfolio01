@@ -108,7 +108,7 @@ category:
 
 .p-recommend-info {
   height: 100%;
-  padding: 1rem;
+  padding: 1rem 0.5rem;
   display: flex;
   flex-wrap: wrap;
   align-self: flex-end;
@@ -147,11 +147,20 @@ category:
     font-weight: normal;
     font-size: 1.4rem;
     color: $body-color;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 1rem;
+    }
   }
 
   &__price {
     margin-bottom: 0;
+    margin-top: 0.5rem;
     color: $gray-600;
     font-weight: bold;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 1rem;
+    }
   }
 }

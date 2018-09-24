@@ -8298,7 +8298,7 @@ Instagramのグリッド表示です。
 
 .p-instagram-container {
   max-width: 1000px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .p-instagram-grid__item {
@@ -8408,7 +8408,7 @@ category:
   align-content: flex-end;
   align-self: flex-end;
   height: 100%;
-  padding: 1rem;
+  padding: 1rem 0.5rem;
   transition: all 0.3s ease-in-out;
 }
 
@@ -8437,6 +8437,7 @@ category:
 }
 
 .p-recommend-info__price {
+  margin-top: 0.5rem;
   margin-bottom: 0;
   color: #6c757d;
   font-weight: bold;
@@ -8880,7 +8881,7 @@ category:
 
 .slick-prev.slick-disabled:before,
 .slick-next.slick-disabled:before {
-  opacity: 0.25;
+  opacity: 0.5;
 }
 
 .slick-prev:before,
@@ -8891,7 +8892,7 @@ category:
   font-family: "slick";
   font-size: 20px;
   line-height: 1;
-  opacity: 0.75;
+  opacity: 1;
 }
 
 .slick-prev {
@@ -8996,12 +8997,12 @@ category:
   line-height: 20px;
   text-align: center;
   content: "•";
-  opacity: 0.25;
+  opacity: 0.5;
 }
 
 .slick-dots li.slick-active button:before {
   color: white;
-  opacity: 0.75;
+  opacity: 1;
 }
 
 /*
@@ -10651,11 +10652,12 @@ a.text-dark:hover, a.text-dark:focus {
     flex-wrap: wrap;
   }
   .p-instagram-grid__item {
-    -ms-flex-preferred-size: calc((100%  / 5) -  5px);
-    flex-basis: calc((100%  / 5) -  5px);
-    max-width: calc((100%  / 5) -  5px);
-    margin-right: 5px;
-    margin-bottom: 5px;
+    -ms-flex-preferred-size: calc(100%  / 5);
+    flex-basis: calc(100%  / 5);
+    max-width: calc(100%  / 5);
+    margin-bottom: 10px;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
   }
   .p-recommend-container {
     width: 100%;
@@ -11220,12 +11222,24 @@ a.text-dark:hover, a.text-dark:focus {
   .p-pagetop--fixed {
     display: none;
   }
+  .p-products-info__name {
+    font-size: 1.2rem;
+  }
+  .p-products-info__price {
+    font-size: 1.1rem;
+  }
   .p-instagram {
     padding-bottom: 30px;
   }
   .p-instagram-grid__item {
     border-right: 5px solid transparent;
     border-left: 5px solid transparent;
+  }
+  .p-recommend-info__name {
+    font-size: 1rem;
+  }
+  .p-recommend-info__price {
+    font-size: 1rem;
   }
 }
 
